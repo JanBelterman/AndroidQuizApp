@@ -43,7 +43,6 @@
         android:layout_marginTop="8dp"
         android:text="Question"
         android:textAlignment="center"
-        android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/multipleChoiceQuizGuideline1"
@@ -137,8 +136,10 @@
         android:onClick="answer4Clicked"
         app:layout_constraintBottom_toTopOf="@+id/multipleChoiceQuizGuideline2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/multipleChoiceQuizGuideline3"
         app:layout_constraintTop_toTopOf="@+id/multipleChoiceQuizGuideline4"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@android:color/holo_green_dark" />
 
     <TextView
@@ -170,16 +171,13 @@
         android:id="@+id/mcScoreText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
         android:text="50%"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mcAnswer4View"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintTop_toTopOf="@+id/mcScoreImageView" />
 
 </android.support.constraint.ConstraintLayout>
