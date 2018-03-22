@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/resultGuideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <TextView
+        android:id="@+id/resultScoreInfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="SCORE"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/resultGuideline1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/hr1"
+        android:layout_width="220dp"
+        android:layout_height="2dp"
+        app:layout_constraintStart_toStartOf="@+id/resultScoreInfoText"
+        app:layout_constraintTop_toBottomOf="@+id/resultScoreInfoText"
+        app:srcCompat="@android:color/holo_orange_dark" />
+
+    <TextView
+        android:id="@+id/resultScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="1083"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/resultScoreInfoText"
+        app:layout_constraintTop_toBottomOf="@+id/resultScoreInfoText" />
+
+    <TextView
+        android:id="@+id/resultTotalQuestionsInfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="TOTAL QUESTIONS"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/resultGuideline1"
+        app:layout_constraintTop_toBottomOf="@+id/resultScoreText" />
+
+    <ImageView
+        android:id="@+id/hr2"
+        android:layout_width="220dp"
+        android:layout_height="2dp"
+        app:layout_constraintStart_toStartOf="@+id/resultTotalQuestionsInfoText"
+        app:layout_constraintTop_toBottomOf="@+id/resultTotalQuestionsInfoText"
+        app:srcCompat="@android:color/holo_orange_dark" />
+
+    <TextView
+        android:id="@+id/normalFbTotalQuestionsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="10"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/resultTotalQuestionsInfoText"
+        app:layout_constraintTop_toBottomOf="@+id/resultTotalQuestionsInfoText" />
+
+    <TextView
+        android:id="@+id/resultAnsweredCorrectInfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="ANSWERED CORRECT"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/resultGuideline1"
+        app:layout_constraintTop_toBottomOf="@+id/normalFbTotalQuestionsText" />
+
+    <ImageView
+        android:id="@+id/hr3"
+        android:layout_width="220dp"
+        android:layout_height="2dp"
+        app:layout_constraintStart_toStartOf="@+id/resultAnsweredCorrectInfoText"
+        app:layout_constraintTop_toBottomOf="@+id/resultAnsweredCorrectInfoText"
+        app:srcCompat="@android:color/holo_orange_dark" />
+
+    <TextView
+        android:id="@+id/normalFbGoodQuestions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="9"
+        app:layout_constraintStart_toStartOf="@+id/resultAnsweredCorrectInfoText"
+        app:layout_constraintTop_toBottomOf="@+id/resultAnsweredCorrectInfoText" />
+
+    <Button
+        android:id="@+id/normalFbOkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/orange_button"
+        android:text="OK"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

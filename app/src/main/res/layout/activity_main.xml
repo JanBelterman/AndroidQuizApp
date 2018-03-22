@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/mainActivityGuideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/mainActivityGuideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="382dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_begin="128dp"
+        app:layout_constraintTop_toBottomOf="@+id/quizImage" />
+
+    <ImageView
+        android:id="@+id/quizImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/mainActivityGuideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/quiz_1455804473" />
+
+    <TextView
+        android:id="@+id/quizTypeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="MultipleChoiceQuiz"
+        app:layout_constraintStart_toStartOf="@+id/quizTypeInfo"
+        app:layout_constraintTop_toBottomOf="@+id/quizTypeInfo" />
+
+    <TextView
+        android:id="@+id/subjectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Computer science"
+        app:layout_constraintStart_toStartOf="@+id/subjectInfo"
+        app:layout_constraintTop_toBottomOf="@+id/subjectInfo" />
+
+    <TextView
+        android:id="@+id/amountOfQuestionsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="20 questions"
+        app:layout_constraintStart_toStartOf="@+id/amountOfQuestionsInfo"
+        app:layout_constraintTop_toBottomOf="@+id/amountOfQuestionsInfo" />
+
+    <TextView
+        android:id="@+id/scoreTypeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Timed score"
+        app:layout_constraintStart_toStartOf="@+id/scoreTypeInfo"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTypeInfo" />
+
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/orange_button"
+        android:text="Settings"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/orange_button"
+        android:text="Start"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/quizTypeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="TYPE"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/mainActivityGuideline1"
+        app:layout_constraintTop_toTopOf="@+id/mainActivityGuideline2" />
+
+    <TextView
+        android:id="@+id/subjectInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="SUBJECT"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/mainActivityGuideline1"
+        app:layout_constraintTop_toBottomOf="@+id/quizTypeText" />
+
+    <TextView
+        android:id="@+id/amountOfQuestionsInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="AMOUNT OF QUESTIONS"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/mainActivityGuideline1"
+        app:layout_constraintTop_toBottomOf="@+id/subjectText" />
+
+    <TextView
+        android:id="@+id/scoreTypeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="SCORE TYPE"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/mainActivityGuideline1"
+        app:layout_constraintTop_toBottomOf="@+id/amountOfQuestionsText" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="220dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@+id/quizTypeInfo"
+        app:layout_constraintTop_toBottomOf="@+id/quizTypeInfo"
+        app:srcCompat="@android:color/holo_orange_dark" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="220dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@+id/subjectInfo"
+        app:layout_constraintTop_toBottomOf="@+id/subjectInfo"
+        app:srcCompat="@android:color/holo_orange_dark" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="220dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@+id/amountOfQuestionsInfo"
+        app:layout_constraintTop_toBottomOf="@+id/amountOfQuestionsInfo"
+        app:srcCompat="@android:color/holo_orange_dark" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="220dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="@+id/scoreTypeInfo"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTypeInfo"
+        app:srcCompat="@android:color/holo_orange_dark" />
+
+</android.support.constraint.ConstraintLayout>

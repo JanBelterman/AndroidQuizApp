@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="quiz_customize">Settings</string>
+    <string name="quiz">Quiz</string>
+    <string name="quiz_result">Results</string>
+
+</resources>
