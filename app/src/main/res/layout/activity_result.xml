@@ -20,7 +20,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:text="SCORE"
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="@color/lightOrange"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/resultGuideline1"
@@ -32,7 +32,7 @@
         android:layout_height="2dp"
         app:layout_constraintStart_toStartOf="@+id/resultScoreInfoText"
         app:layout_constraintTop_toBottomOf="@+id/resultScoreInfoText"
-        app:srcCompat="@android:color/holo_orange_dark" />
+        app:srcCompat="@color/lightOrange" />
 
     <TextView
         android:id="@+id/resultScoreText"
@@ -51,7 +51,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:text="TOTAL QUESTIONS"
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="@color/lightOrange"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/resultGuideline1"
@@ -63,7 +63,7 @@
         android:layout_height="2dp"
         app:layout_constraintStart_toStartOf="@+id/resultTotalQuestionsInfoText"
         app:layout_constraintTop_toBottomOf="@+id/resultTotalQuestionsInfoText"
-        app:srcCompat="@android:color/holo_orange_dark" />
+        app:srcCompat="@color/lightOrange" />
 
     <TextView
         android:id="@+id/normalFbTotalQuestionsText"
@@ -82,7 +82,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="ANSWERED CORRECT"
-        android:textColor="@android:color/holo_orange_dark"
+        android:textColor="@color/lightOrange"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/resultGuideline1"
@@ -94,7 +94,7 @@
         android:layout_height="2dp"
         app:layout_constraintStart_toStartOf="@+id/resultAnsweredCorrectInfoText"
         app:layout_constraintTop_toBottomOf="@+id/resultAnsweredCorrectInfoText"
-        app:srcCompat="@android:color/holo_orange_dark" />
+        app:srcCompat="@color/lightOrange" />
 
     <TextView
         android:id="@+id/normalFbGoodQuestions"
