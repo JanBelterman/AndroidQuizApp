@@ -30,10 +30,8 @@ public class MainActivity extends AppCompatActivity {
                 Subject.CAPITAL_CITIES,
                 10,
                 QuizSetting.SETTING_SCORE_RATIO_SCORE);
-        // Display settings
-        updateDisplayedSettings();
 
-        Button customizeButton = (Button) findViewById(R.id.settingsButton);
+        Button customizeButton = (Button) findViewById(R.id.maSettingsButton);
         customizeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button startButton = (Button) findViewById(R.id.startButton);
+        Button startButton = (Button) findViewById(R.id.maStartButton);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        // Display settings
+        updateDisplayedSettings();
 
     }
 
@@ -86,17 +87,15 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateDisplayedSettings() {
 
-        TextView quizTypeText = (TextView) findViewById(R.id.quizTypeText);
-        TextView subjectText = (TextView) findViewById(R.id.subjectText);
-        TextView amountOfQuestionsText = (TextView) findViewById(R.id.amountOfQuestionsText);
-        TextView scoreTypeText = (TextView) findViewById(R.id.scoreTypeText);
+        TextView quizTypeText = (TextView) findViewById(R.id.maTypeText);
+        TextView subjectText = (TextView) findViewById(R.id.maSubjectText);
+        TextView amountOfQuestionsText = (TextView) findViewById(R.id.maAmountText);
+        TextView scoreTypeText = (TextView) findViewById(R.id.maScoreTypeText);
 
         quizTypeText.setText(quizSettings.getQuizType().getDescription());
         subjectText.setText(quizSettings.getSubject().getDescription());
         amountOfQuestionsText.setText(String.valueOf(quizSettings.getAmountOfQuestions()));
         scoreTypeText.setText(quizSettings.getScoreType().getDescription());
-
-
 
     }
 

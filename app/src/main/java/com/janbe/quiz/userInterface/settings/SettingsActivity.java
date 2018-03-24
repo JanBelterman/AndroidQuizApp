@@ -93,7 +93,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Set seekBar progress and display
         amountOfQuestionsSeekBar.setProgress((quizSettings.getAmountOfQuestions() / 5) - 1);
-        TextView amountOfQuestionsText = (TextView) findViewById(R.id.amountOfQuestionsText);
+        TextView amountOfQuestionsText = (TextView) findViewById(R.id.sAmountText);
         amountOfQuestionsText.setText(String.valueOf(quizSettings.getAmountOfQuestions()));
 
     }
@@ -104,7 +104,7 @@ public class SettingsActivity extends AppCompatActivity {
         // CheckBoxes, when checkBox is clicked the listener will:
         //  - deselect contradictory checkBox
         //  - pass clicked option to quizSettings, which stores that option
-        multipleChoiceBox = (CheckBox) findViewById(R.id.multipleChoiceCheckBox);
+        multipleChoiceBox = (CheckBox) findViewById(R.id.sMultipleChoiceBox);
         multipleChoiceBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -114,7 +114,7 @@ public class SettingsActivity extends AppCompatActivity {
                 quizSettings.setQuizType(QuizSetting.SETTING_QUIZ_MULTIPLE_CHOICE);
             }
         });
-        longListBox = (CheckBox) findViewById(R.id.longListCheckBox);
+        longListBox = (CheckBox) findViewById(R.id.sLongListBox);
         longListBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -125,7 +125,7 @@ public class SettingsActivity extends AppCompatActivity {
                 quizSettings.setQuizType(QuizSetting.SETTING_QUIZ_LONG_LIST);
             }
         });
-        timedScoreBox = (CheckBox) findViewById(R.id.timedScoreCheckBox);
+        timedScoreBox = (CheckBox) findViewById(R.id.sTimedScoreBox);
         timedScoreBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -135,7 +135,7 @@ public class SettingsActivity extends AppCompatActivity {
                 quizSettings.setScore(QuizSetting.SETTING_SCORE_TIMED_SCORE);
             }
         });
-        ratioCheckBox = (CheckBox) findViewById(R.id.ratioScoreCheckBox);
+        ratioCheckBox = (CheckBox) findViewById(R.id.sRatioScoreBox);
         ratioCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -153,14 +153,14 @@ public class SettingsActivity extends AppCompatActivity {
 
         // SeekBar, controls the amount of questions in the quiz
         // Minimum 5 questions, maximum 20 questions
-        amountOfQuestionsSeekBar = (SeekBar) findViewById(R.id.amountOfQuestionsSeekBar);
+        amountOfQuestionsSeekBar = (SeekBar) findViewById(R.id.sAmountBar);
         amountOfQuestionsSeekBar.setMax(5);
         amountOfQuestionsSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 int progress = (i + 1) * 5;
-                TextView amountOfQuestionsText = (TextView) findViewById(R.id.amountOfQuestionsText);
+                TextView amountOfQuestionsText = (TextView) findViewById(R.id.sAmountText);
                 amountOfQuestionsText.setText(String.valueOf(progress));
                 quizSettings.setAmountOfQuestions(progress);
             }
@@ -180,7 +180,7 @@ public class SettingsActivity extends AppCompatActivity {
     private void createSpinner() {
 
         // Create spinner
-        subjectSpinner = (Spinner) findViewById(R.id.spinner);
+        subjectSpinner = (Spinner) findViewById(R.id.sSubjectSpinner);
 
         // Create subject options
         final List<String> subjectList = new ArrayList<>();
@@ -240,7 +240,7 @@ public class SettingsActivity extends AppCompatActivity {
         // First it will check if every checkBox group has an option selected, if not it will alert the user
         // Secondly it will ask the quizSettings to create a quiz according to by the user selected options
         // Finally it will return the quiz to the main method
-        okButton = (Button) findViewById(R.id.okButton);
+        okButton = (Button) findViewById(R.id.sSaveButton);
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

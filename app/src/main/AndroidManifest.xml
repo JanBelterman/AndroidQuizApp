@@ -19,7 +19,7 @@
         </activity>
 
         <activity android:name=".userInterface.settings.SettingsActivity"
-            android:label="@string/quiz_customize">
+            android:label="@string/settings">
         </activity>
 
         <activity android:name=".userInterface.quiz.multipleChoiceQuiz.MultipleChoiceQuizActivity"
@@ -31,7 +31,7 @@
         </activity>
 
         <activity android:name=".userInterface.result.ResultActivity"
-            android:label="@string/quiz_result">
+            android:label="@string/results">
         </activity>
 
     </application>

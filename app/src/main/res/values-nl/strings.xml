@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="results">Resultaten</string>
+    <string name="TYPE">SOORT</string>
+    <string name="SUBJECT">ONDERWERP</string>
+    <string name="AMOUNT_OF_QUESTIONS">AANTAL VRAGEN</string>
+    <string name="SCORE_TYPE">PUNTENTELLING</string>
+    <string name="multipleChoice">Meerkeuze</string>
+    <string name="longList">Lange lijst</string>
+    <string name="maths">Winkunde</string>
+    <string name="capitalCities">Hoofdsteden</string>
+    <string name="computerScience">Computer wetenschappen</string>
+    <string name="percentageCorrect">Percentage correct</string>
+    <string name="quiz">Quiz</string>
+    <string name="fastAnswers">Snelle antwoorden</string>
+    <string name="settings">Instellingen</string>
+    <string name="SETTINGS">INSTELLINGEN</string>
+    <string name="START">STARTEN</string>
+    <string name="SAVE">OPSLAAN</string>
+    <string name="SCORE">PUNTEN</string>
+    <string name="TOTAL_QUESTIONS">TOTALE VRAGEN</string>
+    <string name="ANSWERED_CORRECTLY">GOED BEANTWOORD</string>
+    <string name="OK">OKE</string>
+</resources>

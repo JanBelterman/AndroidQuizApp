@@ -22,24 +22,26 @@ public class ResultActivity extends AppCompatActivity implements Serializable {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        // Starting activity & setting layout
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+        // Get result information from intent
         Intent intent = getIntent();
         Result result = (Result) intent.getSerializableExtra("FEEDBACK");
 
         Score score = result.getScore();
 
-        TextView scoreText = (TextView) findViewById(R.id.resultScoreText);
+        TextView scoreText = (TextView) findViewById(R.id.rScoreText);
         scoreText.setText(score.getScore());
 
-        TextView totalQuestions = (TextView) findViewById(R.id.normalFbTotalQuestionsText);
+        TextView totalQuestions = (TextView) findViewById(R.id.rTotalQuestionsText);
         totalQuestions.setText(score.getTotalAnswers() + "");
 
-        TextView goodQuestions = (TextView) findViewById(R.id.normalFbGoodQuestions);
-        goodQuestions.setText(score.getGoodAnswers() + "");
+        TextView answeredCorrectly = (TextView) findViewById(R.id.rAnsweredCorrectlyText);
+        answeredCorrectly.setText(score.getGoodAnswers() + "");
 
-        Button okButton = (Button) findViewById(R.id.normalFbOkButton);
+        Button okButton = (Button) findViewById(R.id.rOkButton);
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

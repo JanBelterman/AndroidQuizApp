@@ -7,112 +7,112 @@
     tools:layout_editor_absoluteY="81dp">
 
     <android.support.constraint.Guideline
-        android:id="@+id/resultGuideline1"
+        android:id="@+id/rGuideline1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.07" />
 
     <TextView
-        android:id="@+id/resultScoreInfoText"
+        android:id="@+id/rScoreInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
-        android:text="SCORE"
+        android:text="@string/SCORE"
         android:textColor="@color/lightOrange"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/resultGuideline1"
+        app:layout_constraintStart_toStartOf="@+id/rGuideline1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/hr1"
+        android:id="@+id/rScoreHr"
         android:layout_width="220dp"
         android:layout_height="2dp"
-        app:layout_constraintStart_toStartOf="@+id/resultScoreInfoText"
-        app:layout_constraintTop_toBottomOf="@+id/resultScoreInfoText"
+        app:layout_constraintStart_toStartOf="@+id/rScoreInfo"
+        app:layout_constraintTop_toBottomOf="@+id/rScoreInfo"
         app:srcCompat="@color/lightOrange" />
 
     <TextView
-        android:id="@+id/resultScoreText"
+        android:id="@+id/rScoreText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="1083"
+        android:text="0"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/resultScoreInfoText"
-        app:layout_constraintTop_toBottomOf="@+id/resultScoreInfoText" />
+        app:layout_constraintStart_toStartOf="@+id/rScoreInfo"
+        app:layout_constraintTop_toBottomOf="@+id/rScoreInfo" />
 
     <TextView
-        android:id="@+id/resultTotalQuestionsInfoText"
+        android:id="@+id/rTotalQuestionsInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
-        android:text="TOTAL QUESTIONS"
+        android:text="@string/TOTAL_QUESTIONS"
         android:textColor="@color/lightOrange"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/resultGuideline1"
-        app:layout_constraintTop_toBottomOf="@+id/resultScoreText" />
+        app:layout_constraintStart_toStartOf="@+id/rGuideline1"
+        app:layout_constraintTop_toBottomOf="@+id/rScoreText" />
 
     <ImageView
-        android:id="@+id/hr2"
+        android:id="@+id/rTotalQuestionsHr"
         android:layout_width="220dp"
         android:layout_height="2dp"
-        app:layout_constraintStart_toStartOf="@+id/resultTotalQuestionsInfoText"
-        app:layout_constraintTop_toBottomOf="@+id/resultTotalQuestionsInfoText"
+        app:layout_constraintStart_toStartOf="@+id/rTotalQuestionsInfo"
+        app:layout_constraintTop_toBottomOf="@+id/rTotalQuestionsInfo"
         app:srcCompat="@color/lightOrange" />
 
     <TextView
-        android:id="@+id/normalFbTotalQuestionsText"
+        android:id="@+id/rTotalQuestionsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="10"
         android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="@+id/resultTotalQuestionsInfoText"
-        app:layout_constraintTop_toBottomOf="@+id/resultTotalQuestionsInfoText" />
+        app:layout_constraintStart_toStartOf="@+id/rTotalQuestionsInfo"
+        app:layout_constraintTop_toBottomOf="@+id/rTotalQuestionsInfo" />
 
     <TextView
-        android:id="@+id/resultAnsweredCorrectInfoText"
+        android:id="@+id/rAnsweredCorrectInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="ANSWERED CORRECT"
+        android:text="@string/ANSWERED_CORRECTLY"
         android:textColor="@color/lightOrange"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/resultGuideline1"
-        app:layout_constraintTop_toBottomOf="@+id/normalFbTotalQuestionsText" />
+        app:layout_constraintStart_toStartOf="@+id/rGuideline1"
+        app:layout_constraintTop_toBottomOf="@+id/rTotalQuestionsText" />
 
     <ImageView
-        android:id="@+id/hr3"
+        android:id="@+id/rAnsweredCorrectlyHr"
         android:layout_width="220dp"
         android:layout_height="2dp"
-        app:layout_constraintStart_toStartOf="@+id/resultAnsweredCorrectInfoText"
-        app:layout_constraintTop_toBottomOf="@+id/resultAnsweredCorrectInfoText"
+        app:layout_constraintStart_toStartOf="@+id/rAnsweredCorrectInfo"
+        app:layout_constraintTop_toBottomOf="@+id/rAnsweredCorrectInfo"
         app:srcCompat="@color/lightOrange" />
 
     <TextView
-        android:id="@+id/normalFbGoodQuestions"
+        android:id="@+id/rAnsweredCorrectlyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="9"
-        app:layout_constraintStart_toStartOf="@+id/resultAnsweredCorrectInfoText"
-        app:layout_constraintTop_toBottomOf="@+id/resultAnsweredCorrectInfoText" />
+        android:text="0"
+        app:layout_constraintStart_toStartOf="@+id/rAnsweredCorrectInfo"
+        app:layout_constraintTop_toBottomOf="@+id/rAnsweredCorrectInfo" />
 
     <Button
-        android:id="@+id/normalFbOkButton"
+        android:id="@+id/rOkButton"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/orange_button"
-        android:text="OK"
+        android:text="@string/OK"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

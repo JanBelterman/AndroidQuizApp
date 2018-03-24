@@ -1,7 +1,25 @@
 <resources>
 
-    <string name="quiz_customize">Settings</string>
     <string name="quiz">Quiz</string>
-    <string name="quiz_result">Results</string>
+    <string name="results">Results</string>
+    <string name="TYPE">TYPE</string>
+    <string name="SUBJECT">SUBJECT</string>
+    <string name="AMOUNT_OF_QUESTIONS">AMOUNT OF QUESTIONS</string>
+    <string name="SCORE_TYPE">SCORE TYPE</string>
+    <string name="multipleChoice">Multiple choice</string>
+    <string name="longList">Long list</string>
+    <string name="computerScience">Computer science</string>
+    <string name="capitalCities">Capital cities</string>
+    <string name="maths">Maths</string>
+    <string name="percentageCorrect">Percentage correct</string>
+    <string name="fastAnswers">Fast answers</string>
+    <string name="settings">Settings</string>
+    <string name="SETTINGS">SETTINGS</string>
+    <string name="START">START</string>
+    <string name="SAVE">SAVE</string>
+    <string name="SCORE">SCORE</string>
+    <string name="TOTAL_QUESTIONS">TOTAL QUESTIONS</string>
+    <string name="ANSWERED_CORRECTLY">ANSWERED CORRECTLY</string>
+    <string name="OK">OK</string>
 
 </resources>

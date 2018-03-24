@@ -4,182 +4,173 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
 
-    <android.support.constraint.Guideline
-        android:id="@+id/mainActivityGuideline1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/mainActivityGuideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="382dp"
-        android:orientation="horizontal"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintGuide_begin="128dp"
-        app:layout_constraintTop_toBottomOf="@+id/quizImage" />
-
-    <ImageView
-        android:id="@+id/quizImage"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toTopOf="@+id/mainActivityGuideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/quiz_1455804473" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/quizTypeInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:text="TYPE"
-        android:textColor="@color/lightOrange"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/mainActivityGuideline1"
-        app:layout_constraintTop_toTopOf="@+id/mainActivityGuideline2" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/hr1"
-        android:layout_width="220dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="2dp"
-        app:layout_constraintStart_toStartOf="@+id/quizTypeInfo"
-        app:layout_constraintTop_toBottomOf="@+id/quizTypeInfo"
-        app:srcCompat="@color/lightOrange" />
+            <android.support.constraint.Guideline
+                android:id="@+id/maGuideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.07" />
 
-    <TextView
-        android:id="@+id/quizTypeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="MultipleChoiceQuiz"
-        app:layout_constraintStart_toStartOf="@+id/quizTypeInfo"
-        app:layout_constraintTop_toBottomOf="@+id/quizTypeInfo" />
+            <TextView
+                android:id="@+id/maSubjectInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/SUBJECT"
+                android:textColor="@color/lightOrange"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/maGuideline1"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/subjectInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="SUBJECT"
-        android:textColor="@color/lightOrange"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/mainActivityGuideline1"
-        app:layout_constraintTop_toBottomOf="@+id/quizTypeText" />
+            <ImageView
+                android:id="@+id/maSubjectHr"
+                android:layout_width="220dp"
+                android:layout_height="2dp"
+                app:layout_constraintStart_toStartOf="@+id/maSubjectInfo"
+                app:layout_constraintTop_toBottomOf="@+id/maSubjectInfo"
+                app:srcCompat="@color/lightOrange" />
 
-    <ImageView
-        android:id="@+id/hr2"
-        android:layout_width="220dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="2dp"
-        app:layout_constraintStart_toStartOf="@+id/subjectInfo"
-        app:layout_constraintTop_toBottomOf="@+id/subjectInfo"
-        app:srcCompat="@color/lightOrange" />
+            <TextView
+                android:id="@+id/maSubjectText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/capitalCities"
+                app:layout_constraintStart_toStartOf="@+id/maSubjectInfo"
+                app:layout_constraintTop_toBottomOf="@+id/maSubjectInfo" />
 
-    <TextView
-        android:id="@+id/subjectText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Computer science"
-        app:layout_constraintStart_toStartOf="@+id/subjectInfo"
-        app:layout_constraintTop_toBottomOf="@+id/subjectInfo" />
+            <TextView
+                android:id="@+id/maTypeInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/TYPE"
+                android:textColor="@color/lightOrange"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/maGuideline1"
+                app:layout_constraintTop_toBottomOf="@+id/maSubjectText" />
 
-    <TextView
-        android:id="@+id/amountOfQuestionsInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="AMOUNT OF QUESTIONS"
-        android:textColor="@color/lightOrange"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/mainActivityGuideline1"
-        app:layout_constraintTop_toBottomOf="@+id/subjectText" />
+            <ImageView
+                android:id="@+id/maTypeHr"
+                android:layout_width="220dp"
+                android:layout_height="2dp"
+                app:layout_constraintStart_toStartOf="@+id/maTypeInfo"
+                app:layout_constraintTop_toBottomOf="@+id/maTypeInfo"
+                app:srcCompat="@color/lightOrange" />
 
-    <ImageView
-        android:id="@+id/hr3"
-        android:layout_width="220dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="2dp"
-        app:layout_constraintStart_toStartOf="@+id/amountOfQuestionsInfo"
-        app:layout_constraintTop_toBottomOf="@+id/amountOfQuestionsInfo"
-        app:srcCompat="@color/lightOrange" />
+            <TextView
+                android:id="@+id/maTypeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/multipleChoice"
+                app:layout_constraintStart_toStartOf="@+id/maTypeInfo"
+                app:layout_constraintTop_toBottomOf="@+id/maTypeInfo" />
 
-    <TextView
-        android:id="@+id/amountOfQuestionsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="20 questions"
-        app:layout_constraintStart_toStartOf="@+id/amountOfQuestionsInfo"
-        app:layout_constraintTop_toBottomOf="@+id/amountOfQuestionsInfo" />
+            <TextView
+                android:id="@+id/maAmountOfQuestionsInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/AMOUNT_OF_QUESTIONS"
+                android:textColor="@color/lightOrange"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/maGuideline1"
+                app:layout_constraintTop_toBottomOf="@+id/maTypeText" />
 
-    <TextView
-        android:id="@+id/scoreTypeInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="SCORE TYPE"
-        android:textColor="@color/lightOrange"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/mainActivityGuideline1"
-        app:layout_constraintTop_toBottomOf="@+id/amountOfQuestionsText" />
+            <ImageView
+                android:id="@+id/maAmountHr"
+                android:layout_width="220dp"
+                android:layout_height="2dp"
+                app:layout_constraintStart_toStartOf="@+id/maAmountOfQuestionsInfo"
+                app:layout_constraintTop_toBottomOf="@+id/maAmountOfQuestionsInfo"
+                app:srcCompat="@color/lightOrange" />
 
-    <ImageView
-        android:id="@+id/hr4"
-        android:layout_width="220dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="2dp"
-        app:layout_constraintStart_toStartOf="@+id/scoreTypeInfo"
-        app:layout_constraintTop_toBottomOf="@+id/scoreTypeInfo"
-        app:srcCompat="@color/lightOrange" />
+            <TextView
+                android:id="@+id/maAmountText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="10"
+                app:layout_constraintStart_toStartOf="@+id/maAmountOfQuestionsInfo"
+                app:layout_constraintTop_toBottomOf="@+id/maAmountOfQuestionsInfo" />
 
-    <TextView
-        android:id="@+id/scoreTypeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Timed score"
-        app:layout_constraintStart_toStartOf="@+id/scoreTypeInfo"
-        app:layout_constraintTop_toBottomOf="@+id/scoreTypeInfo" />
+            <TextView
+                android:id="@+id/maScoreTypeInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/SCORE_TYPE"
+                android:textColor="@color/lightOrange"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/maGuideline1"
+                app:layout_constraintTop_toBottomOf="@+id/maAmountText" />
 
-    <Button
-        android:id="@+id/settingsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/orange_button"
-        android:text="Settings"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <ImageView
+                android:id="@+id/maScoreHr"
+                android:layout_width="220dp"
+                android:layout_height="2dp"
+                app:layout_constraintStart_toStartOf="@+id/maScoreTypeInfo"
+                app:layout_constraintTop_toBottomOf="@+id/maScoreTypeInfo"
+                app:srcCompat="@color/lightOrange" />
+
+            <TextView
+                android:id="@+id/maScoreTypeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="56dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/percentageCorrect"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/maScoreTypeInfo"
+                app:layout_constraintTop_toBottomOf="@+id/maScoreTypeInfo" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
     <Button
-        android:id="@+id/startButton"
+        android:id="@+id/maSettingsButton"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/orange_button"
-        android:text="Start"
+        android:text="@string/SETTINGS"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/maStartButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@drawable/big_button"
+        android:text="@string/START"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

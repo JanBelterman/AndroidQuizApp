@@ -15,178 +15,178 @@
             android:layout_height="wrap_content">
 
             <android.support.constraint.Guideline
-                android:id="@+id/guideline5"
+                android:id="@+id/sGuideline1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 app:layout_constraintGuide_percent="0.07" />
 
             <TextView
-                android:id="@+id/chooseQuizText"
+                android:id="@+id/sSubjectInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
-                android:text="TYPE"
-                android:textColor="@color/lightOrange"
+                android:layout_marginTop="32dp"
+                android:text="@string/SUBJECT"
+                android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/sGuideline1"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/hr1"
+                android:id="@+id/sSubjectHr"
                 android:layout_width="220dp"
                 android:layout_height="2dp"
-                android:layout_marginTop="2dp"
-                app:layout_constraintStart_toStartOf="@+id/chooseQuizText"
-                app:layout_constraintTop_toBottomOf="@+id/chooseQuizText"
-                app:srcCompat="@android:color/holo_orange_dark" />
-
-            <CheckBox
-                android:id="@+id/multipleChoiceCheckBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
-                android:checked="false"
-                android:text="Multiple choice"
-                android:textColorLink="@android:color/holo_orange_dark"
-                app:layout_constraintStart_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toBottomOf="@+id/chooseQuizText" />
-
-            <CheckBox
-                android:id="@+id/longListCheckBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="Long list"
-                app:layout_constraintStart_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toBottomOf="@+id/multipleChoiceCheckBox" />
-
-            <TextView
-                android:id="@+id/subjectText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:text="SUBJECT"
-                android:textColor="@android:color/holo_orange_dark"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toBottomOf="@+id/longListCheckBox" />
-
-            <ImageView
-                android:id="@+id/hr2"
-                android:layout_width="220dp"
-                android:layout_height="2dp"
-                android:layout_marginTop="2dp"
-                app:layout_constraintStart_toStartOf="@+id/subjectText"
-                app:layout_constraintTop_toBottomOf="@+id/subjectText"
+                app:layout_constraintStart_toStartOf="@+id/sSubjectInfo"
+                app:layout_constraintTop_toBottomOf="@+id/sSubjectInfo"
                 app:srcCompat="@android:color/holo_orange_dark" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/sSubjectSpinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                app:layout_constraintStart_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toBottomOf="@+id/subjectText" />
+                app:layout_constraintStart_toStartOf="@+id/sSubjectInfo"
+                app:layout_constraintTop_toBottomOf="@+id/sSubjectInfo" />
 
             <TextView
-                android:id="@+id/chooseAmountText"
+                android:id="@+id/sTypeInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:text="AMOUNT OF QUESTIONS"
+                android:text="@string/TYPE"
+                android:textColor="@color/lightOrange"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/sGuideline1"
+                app:layout_constraintTop_toBottomOf="@+id/sSubjectSpinner" />
+
+            <ImageView
+                android:id="@+id/sTypeHr"
+                android:layout_width="220dp"
+                android:layout_height="2dp"
+                app:layout_constraintStart_toStartOf="@+id/sTypeInfo"
+                app:layout_constraintTop_toBottomOf="@+id/sTypeInfo"
+                app:srcCompat="@android:color/holo_orange_dark" />
+
+            <CheckBox
+                android:id="@+id/sMultipleChoiceBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:text="@string/multipleChoice"
+                android:textColorLink="@android:color/holo_orange_dark"
+                app:layout_constraintStart_toStartOf="@+id/sTypeInfo"
+                app:layout_constraintTop_toBottomOf="@+id/sTypeInfo" />
+
+            <CheckBox
+                android:id="@+id/sLongListBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/longList"
+                app:layout_constraintStart_toStartOf="@+id/sTypeInfo"
+                app:layout_constraintTop_toBottomOf="@+id/sMultipleChoiceBox" />
+
+            <TextView
+                android:id="@+id/sAmountInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/AMOUNT_OF_QUESTIONS"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+                app:layout_constraintStart_toStartOf="@+id/sGuideline1"
+                app:layout_constraintTop_toBottomOf="@+id/sLongListBox" />
+
+            <ImageView
+                android:id="@+id/sAmountHr"
+                android:layout_width="220dp"
+                android:layout_height="2dp"
+                app:layout_constraintStart_toStartOf="@+id/sAmountInfo"
+                app:layout_constraintTop_toBottomOf="@+id/sAmountInfo"
+                app:srcCompat="@android:color/holo_orange_dark" />
 
             <TextView
-                android:id="@+id/amountOfQuestionsText"
+                android:id="@+id/sAmountText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:text="20"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/chooseAmountText"
-                app:layout_constraintStart_toStartOf="@+id/chooseAmountText"
-                app:layout_constraintTop_toBottomOf="@+id/chooseAmountText" />
-
-            <ImageView
-                android:id="@+id/hr3"
-                android:layout_width="220dp"
-                android:layout_height="2dp"
-                android:layout_marginTop="2dp"
-                app:layout_constraintStart_toStartOf="@+id/chooseAmountText"
-                app:layout_constraintTop_toBottomOf="@+id/chooseAmountText"
-                app:srcCompat="@android:color/holo_orange_dark" />
+                app:layout_constraintEnd_toEndOf="@+id/sAmountInfo"
+                app:layout_constraintStart_toStartOf="@+id/sAmountInfo"
+                app:layout_constraintTop_toBottomOf="@+id/sAmountInfo" />
 
             <SeekBar
-                android:id="@+id/amountOfQuestionsSeekBar"
-                android:layout_width="0dp"
+                android:id="@+id/sAmountBar"
+                android:layout_width="205dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="@+id/chooseAmountText"
-                app:layout_constraintStart_toStartOf="@+id/chooseAmountText"
-                app:layout_constraintTop_toBottomOf="@+id/amountOfQuestionsText" />
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/sAmountInfo"
+                app:layout_constraintStart_toStartOf="@+id/sAmountInfo"
+                app:layout_constraintTop_toBottomOf="@+id/sAmountText" />
 
             <TextView
-                android:id="@+id/chooseScoreText"
+                android:id="@+id/sScoreInfo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
-                android:text="SCORE TYPE"
+                android:text="@string/SCORE_TYPE"
                 android:textColor="@android:color/holo_orange_dark"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toBottomOf="@+id/amountOfQuestionsSeekBar" />
+                app:layout_constraintStart_toStartOf="@+id/sGuideline1"
+                app:layout_constraintTop_toBottomOf="@+id/sAmountBar" />
 
             <ImageView
-                android:id="@+id/hr4"
+                android:id="@+id/sScoreHr"
                 android:layout_width="220dp"
                 android:layout_height="2dp"
-                app:layout_constraintStart_toStartOf="@+id/chooseScoreText"
-                app:layout_constraintTop_toBottomOf="@+id/chooseScoreText"
+                app:layout_constraintStart_toStartOf="@+id/sScoreInfo"
+                app:layout_constraintTop_toBottomOf="@+id/sScoreInfo"
                 app:srcCompat="@android:color/holo_orange_dark" />
 
             <CheckBox
-                android:id="@+id/ratioScoreCheckBox"
+                android:id="@+id/sRatioScoreBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
-                android:text="Ratio score"
-                app:layout_constraintStart_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toBottomOf="@+id/chooseScoreText" />
+                android:layout_marginTop="8dp"
+                android:text="@string/percentageCorrect"
+                app:layout_constraintStart_toStartOf="@+id/sScoreInfo"
+                app:layout_constraintTop_toBottomOf="@+id/sScoreInfo" />
 
             <CheckBox
-                android:id="@+id/timedScoreCheckBox"
+                android:id="@+id/sTimedScoreBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:layout_marginStart="8dp"
-                android:text="Timed score"
+                android:text="@string/fastAnswers"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toBottomOf="@+id/ratioScoreCheckBox" />
+                app:layout_constraintStart_toStartOf="@+id/sScoreInfo"
+                app:layout_constraintTop_toBottomOf="@+id/sRatioScoreBox" />
 
             <Button
-                android:id="@+id/okButton"
+                android:id="@+id/sSaveButton"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/orange_button"
-                android:text="OK"
+                android:text="@string/SAVE"
                 android:textColor="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
