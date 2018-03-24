@@ -1,5 +1,6 @@
 package com.janbe.quiz.logic.settings;
 
+import com.janbe.quiz.logic.quiz.questionAnswerManager.QuestionAnswerManagerFactory;
 import com.janbe.quiz.userInterface.quiz.longListQuiz.LongListQuizActivity;
 import com.janbe.quiz.userInterface.quiz.multipleChoiceQuiz.MultipleChoiceQuizActivity;
 import com.janbe.quiz.data.factory.RepositoryFactory;
@@ -7,8 +8,6 @@ import com.janbe.quiz.domain.Subject;
 import com.janbe.quiz.logic.quiz.NormalQuiz;
 import com.janbe.quiz.logic.quiz.Quiz;
 import com.janbe.quiz.logic.quiz.result.NormalResult;
-import com.janbe.quiz.logic.quiz.questionAnswerManager.LongListQuestionAnswerManager;
-import com.janbe.quiz.logic.quiz.questionAnswerManager.MultipleChoiceQuestionAnswerManager;
 import com.janbe.quiz.logic.quiz.questionAnswerManager.QuestionAnswerManager;
 import com.janbe.quiz.logic.quiz.score.RationScore;
 import com.janbe.quiz.logic.quiz.score.Score;
@@ -36,22 +35,14 @@ public class QuizSettings implements Serializable {
 
         // Settings in real objects & values
         QuestionAnswerManager questionAnswerManager;
-        Subject subject;
-        int amountOfQuestions;
         Score score;
 
-        // Getting quiz type
-        if (quizType == QuizSetting.SETTING_QUIZ_MULTIPLE_CHOICE) {
-            questionAnswerManager = new MultipleChoiceQuestionAnswerManager(repositoryFactory);
-
-        } else {
-            questionAnswerManager = new LongListQuestionAnswerManager(repositoryFactory);
-
-        }
-
-        // Subject and amount of questions
-        subject = this.subject;
-        amountOfQuestions = this.amountOfQuestions;
+        // Using a factory to get correct QuestionAnswerManager
+        questionAnswerManager = new QuestionAnswerManagerFactory().
+                getQuestionAnswerManager(
+                        quizType,
+                        this.subject.isGeneralQuestion(),
+                        repositoryFactory);
 
         // Getting score type
         if (scoreType == QuizSetting.SETTING_SCORE_RATIO_SCORE) {

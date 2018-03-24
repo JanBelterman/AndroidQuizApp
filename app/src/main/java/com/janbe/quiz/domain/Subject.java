@@ -7,19 +7,26 @@ package com.janbe.quiz.domain;
 // Enumeration for the available quiz subjects
 public enum Subject {
 
-    CAPITAL_CITIES("Capital cities"),
-    COMPUTER_SCIENCE("Computer science"),
-    MATHS("Maths");
+    CAPITAL_CITIES(true, "Capital cities"),
+    COMPUTER_SCIENCE(false, "Computer science"),
+    MATHS(false, "Maths");
 
+    private final boolean isGeneralQuestion;
     private final String description;
 
-    Subject(String description) {
+    Subject(boolean isGeneralQuestion, String description) {
         this.description = description;
+        this.isGeneralQuestion = isGeneralQuestion;
 
     }
 
     public String getDescription() {
         return description;
+
+    }
+
+    public boolean isGeneralQuestion() {
+        return isGeneralQuestion;
 
     }
 

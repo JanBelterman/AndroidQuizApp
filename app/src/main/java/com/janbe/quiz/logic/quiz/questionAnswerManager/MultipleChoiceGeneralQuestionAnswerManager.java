@@ -5,19 +5,17 @@ import com.janbe.quiz.data.factory.RepositoryFactory;
 import com.janbe.quiz.data.question.QuestionRepository;
 import com.janbe.quiz.domain.Subject;
 import com.janbe.quiz.domain.answer.Answer;
-import com.janbe.quiz.domain.question.GeneralAnsweredQuestion;
 import com.janbe.quiz.domain.question.Question;
-import com.janbe.quiz.domain.question.QuestionType;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
 /**
- * Created by janbe on 15-Mar-18.
+ * Created by janbe on 24-Mar-18.
  */
 
-public class MultipleChoiceQuestionAnswerManager implements QuestionAnswerManager {
+public class MultipleChoiceGeneralQuestionAnswerManager implements QuestionAnswerManager {
 
     // Data source
     private RepositoryFactory repositoryFactory;
@@ -28,7 +26,7 @@ public class MultipleChoiceQuestionAnswerManager implements QuestionAnswerManage
     // SET-UP
     //////////////////////////////////////////////////////////////////////////////////////////
 
-    public MultipleChoiceQuestionAnswerManager(RepositoryFactory repositoryFactory) {
+    public MultipleChoiceGeneralQuestionAnswerManager(RepositoryFactory repositoryFactory) {
         this.repositoryFactory = repositoryFactory;
 
     }
@@ -55,20 +53,17 @@ public class MultipleChoiceQuestionAnswerManager implements QuestionAnswerManage
             i++;
         }
 
-        // Get answers, only for general answered answers, also shuffle them
+        // Get answers, only for general answered answers, also shuffle them, ONLY NEEDED Because of general answers
         answers = new ArrayList<>();
-        if (isGeneralQuestion(0)) {
 
-            // Get answers
-            AnswerRepository answerRepository = repositoryFactory.getAnswerRepository();
-            answers = answerRepository.getAnswers(subject);
-            Collections.shuffle(answers);
-
-        }
+        // Get answers
+        AnswerRepository answerRepository = repositoryFactory.getAnswerRepository();
+        answers = answerRepository.getAnswers(subject);
+        Collections.shuffle(answers);
 
     }
 
-    // START
+    // GET QUESTION AND ANSWERS
     //////////////////////////////////////////////////////////////////////////////////////////
 
     // Returns the question for a certain index
@@ -83,23 +78,6 @@ public class MultipleChoiceQuestionAnswerManager implements QuestionAnswerManage
     // But if the question is a general answered question, all answers are stored in the answer list.
     @Override
     public ArrayList<Answer> getAnswers(int questionIndex) {
-
-        // So first check if question is general answered or specific answered and than return relevant group of answer
-        // Than return equivalent group of answers
-        if (isGeneralQuestion(questionIndex)) {
-            return getGeneralAnswers(questionIndex);
-
-        } else {
-            return getSpecificAnswers(questionIndex);
-
-        }
-
-    }
-
-    //BIG HELPER METHODS
-    //////////////////////////////////////////////////////////////////////////////////////////
-
-    private ArrayList<Answer> getGeneralAnswers(int questionIndex) {
 
         Question question = getQuestion(questionIndex);
         ArrayList<Answer> answers = new ArrayList<>();
@@ -127,29 +105,10 @@ public class MultipleChoiceQuestionAnswerManager implements QuestionAnswerManage
 
     }
 
-    private ArrayList<Answer> getSpecificAnswers(int questionIndex) {
-
-        Question question = getQuestion(questionIndex);
-        ArrayList<Answer> answers = new ArrayList<>();
-
-        answers.add(question.getRightAnswer());
-        answers.addAll(question.getWrongAnswers());
-
-        Collections.shuffle(answers);
-        return answers;
-
-    }
-
-    // SMALL HELPER METHODS
+    // HELPER METHODS
     //////////////////////////////////////////////////////////////////////////////////////////
 
-    // Returns is question at certain index is general question
-    private boolean isGeneralQuestion(int questionIndex) {
-        return getQuestion(questionIndex).getQuestionType() == QuestionType.GENERAL_ANSWERED_QUESTION;
-
-    }
-
-    // Returns a random answer
+    // Returns a random answer, only for general answers
     private Answer getRandomAnswer() {
         Random random = new Random();
         return answers.get(random.nextInt(answers.size() - 1));

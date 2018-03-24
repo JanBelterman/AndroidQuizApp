@@ -1,35 +1,29 @@
 package com.janbe.quiz.logic.quiz.questionAnswerManager;
 
-import com.janbe.quiz.data.answer.AnswerRepository;
 import com.janbe.quiz.data.factory.RepositoryFactory;
 import com.janbe.quiz.data.question.QuestionRepository;
 import com.janbe.quiz.domain.Subject;
 import com.janbe.quiz.domain.answer.Answer;
-import com.janbe.quiz.domain.question.GeneralAnsweredQuestion;
 import com.janbe.quiz.domain.question.Question;
-import com.janbe.quiz.domain.question.QuestionType;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.Random;
 
 /**
- * Created by janbe on 21-Mar-18.
+ * Created by janbe on 24-Mar-18.
  */
 
-public class LongListQuestionAnswerManager implements QuestionAnswerManager {
+public class MultipleChoiceSpecificQuestionAnswerManager implements QuestionAnswerManager {
 
     // Data source
     private RepositoryFactory repositoryFactory;
-    // Lists with question and answers
+    // Lists with question
     private ArrayList<Question> questions;
-    private ArrayList<Answer> answers;
 
     // SET-UP
     //////////////////////////////////////////////////////////////////////////////////////////
 
-    public LongListQuestionAnswerManager(RepositoryFactory repositoryFactory) {
+    public MultipleChoiceSpecificQuestionAnswerManager(RepositoryFactory repositoryFactory) {
         this.repositoryFactory = repositoryFactory;
 
     }
@@ -56,16 +50,9 @@ public class LongListQuestionAnswerManager implements QuestionAnswerManager {
             i++;
         }
 
-        // Get answers, only for general answered answers, also shuffle them
-        answers = new ArrayList<>();
-
-        AnswerRepository answerRepository = repositoryFactory.getAnswerRepository();
-        answers = answerRepository.getAnswers(subject);
-        Collections.shuffle(answers);
-
     }
 
-    // GETTING QUESTIONS & ANSWERS
+    // GET QUESTION AND ANSWERS
     //////////////////////////////////////////////////////////////////////////////////////////
 
     // Returns the question for a certain index
@@ -75,46 +62,19 @@ public class LongListQuestionAnswerManager implements QuestionAnswerManager {
 
     }
 
-    // Because quiz's questions contain a long list of answers, every answers group contains all of the stored answers.
+    // Because quiz is multiple choice, every answers group contains 4 answers.
+    // If the questions is a specific answered question, the 4 answers are stored in the question itself.
+    // But if the question is a general answered question, all answers are stored in the answer list.
     @Override
     public ArrayList<Answer> getAnswers(int questionIndex) {
 
         Question question = getQuestion(questionIndex);
         ArrayList<Answer> answers = new ArrayList<>();
 
-        // Add right answer
         answers.add(question.getRightAnswer());
+        answers.addAll(question.getWrongAnswers());
 
-        // Add remaining 3 random (false) answers
-        for (Answer answer : this.answers) {
-
-            // Checks if answer is duplicate
-            if (answers.contains(answer)) {
-                continue;
-            }
-            // Add answer if its not a duplicate
-            answers.add(answer);
-
-        }
-
-        // Questions need to be found easily, so the list is sorted on alphabet
-        return sortAnswersOnAlphabet(answers);
-
-    }
-
-    // SORTING ANSWERS
-    //////////////////////////////////////////////////////////////////////////////////////////
-
-    // Sorting answers on alphabetical order, so user can seek for answers easily
-    private ArrayList<Answer> sortAnswersOnAlphabet(ArrayList<Answer> answers) {
-
-        Collections.sort(answers, new Comparator<Answer>() {
-            @Override
-            public int compare(Answer answer1, Answer answer2) {
-                return answer1.getAnswer().compareTo(answer2.getAnswer());
-            }
-        });
-
+        Collections.shuffle(answers);
         return answers;
 
     }
