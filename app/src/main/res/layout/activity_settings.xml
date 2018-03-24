@@ -46,7 +46,6 @@
                 android:id="@+id/sSubjectSpinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toStartOf="@+id/sSubjectInfo"
                 app:layout_constraintTop_toBottomOf="@+id/sSubjectInfo" />
@@ -76,7 +75,6 @@
                 android:id="@+id/sMultipleChoiceBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:checked="false"
                 android:text="@string/multipleChoice"
@@ -88,7 +86,6 @@
                 android:id="@+id/sLongListBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:text="@string/longList"
                 app:layout_constraintStart_toStartOf="@+id/sTypeInfo"
                 app:layout_constraintTop_toBottomOf="@+id/sMultipleChoiceBox" />
@@ -121,20 +118,19 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:text="10"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="@+id/sAmountInfo"
-                app:layout_constraintStart_toStartOf="@+id/sAmountInfo"
+                app:layout_constraintEnd_toEndOf="@+id/sAmountHr"
+                app:layout_constraintStart_toStartOf="@+id/sAmountHr"
                 app:layout_constraintTop_toBottomOf="@+id/sAmountInfo" />
 
             <SeekBar
                 android:id="@+id/sAmountBar"
-                android:layout_width="205dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintEnd_toEndOf="@+id/sAmountInfo"
-                app:layout_constraintStart_toStartOf="@+id/sAmountInfo"
+                app:layout_constraintEnd_toEndOf="@+id/sAmountHr"
+                app:layout_constraintStart_toStartOf="@+id/sAmountHr"
                 app:layout_constraintTop_toBottomOf="@+id/sAmountText" />
 
             <TextView
@@ -162,7 +158,6 @@
                 android:id="@+id/sRatioScoreBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:text="@string/percentageCorrect"
                 app:layout_constraintStart_toStartOf="@+id/sScoreInfo"
@@ -173,7 +168,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:layout_marginStart="8dp"
                 android:text="@string/fastAnswers"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/sScoreInfo"

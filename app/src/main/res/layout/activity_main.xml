@@ -157,6 +157,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/orange_button"
+        android:paddingEnd="2dp"
+        android:paddingStart="2dp"
         android:text="@string/SETTINGS"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"

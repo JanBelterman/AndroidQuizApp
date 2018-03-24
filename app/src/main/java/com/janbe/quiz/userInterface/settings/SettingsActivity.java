@@ -184,9 +184,9 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Create subject options
         final List<String> subjectList = new ArrayList<>();
-        subjectList.add(Subject.CAPITAL_CITIES.getDescription());
-        subjectList.add(Subject.COMPUTER_SCIENCE.getDescription());
-        subjectList.add(Subject.MATHS.getDescription());
+        subjectList.add(getString(Subject.CAPITAL_CITIES.getDescription()));
+        subjectList.add(getString(Subject.COMPUTER_SCIENCE.getDescription()));
+        subjectList.add(getString(Subject.MATHS.getDescription()));
 
         // Create adapter and link to spinner
         // Long list quiz only available for general answered questions, so when for example computer science or maths is chosen
@@ -202,25 +202,25 @@ public class SettingsActivity extends AppCompatActivity {
 
                 String subject = subjectList.get(i);
 
-                if (subject.equals(Subject.CAPITAL_CITIES.getDescription())) {
+                if (subject.equals(getString(Subject.CAPITAL_CITIES.getDescription()))) {
                     quizSettings.setSubject(Subject.CAPITAL_CITIES);
-                    longListBox.setEnabled(true);
+                    longListBox.setEnabled(Subject.CAPITAL_CITIES.isGeneralQuestion());
 
-                } else if (subject.equals(Subject.COMPUTER_SCIENCE.getDescription())) {
+                } else if (subject.equals(getString(Subject.COMPUTER_SCIENCE.getDescription()))) {
                     quizSettings.setSubject(Subject.COMPUTER_SCIENCE);
                     if (longListBox.isChecked()) {
                         multipleChoiceBox.toggle();
                         showError("Long list quiz not available for " + subject);
                     }
-                    longListBox.setEnabled(false);
+                    longListBox.setEnabled(Subject.COMPUTER_SCIENCE.isGeneralQuestion());
 
-                } else if (subject.equals(Subject.MATHS.getDescription())) {
+                } else if (subject.equals(getString(Subject.MATHS.getDescription()))) {
                     quizSettings.setSubject(Subject.MATHS);
                     if (longListBox.isChecked()) {
                         multipleChoiceBox.toggle();
                         showError("Long list quiz not available for " + subject);
                     }
-                    longListBox.setEnabled(false);
+                    longListBox.setEnabled(Subject.MATHS.isGeneralQuestion());
 
                 }
 
