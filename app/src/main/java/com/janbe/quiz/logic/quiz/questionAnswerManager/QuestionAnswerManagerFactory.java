@@ -1,13 +1,7 @@
 package com.janbe.quiz.logic.quiz.questionAnswerManager;
 
 import com.janbe.quiz.data.factory.RepositoryFactory;
-import com.janbe.quiz.domain.question.GeneralAnsweredQuestion;
-import com.janbe.quiz.domain.question.Question;
 import com.janbe.quiz.logic.settings.QuizSetting;
-
-/**
- * Created by janbe on 24-Mar-18.
- */
 
 // Simple factory to determine which QuestionAnswerManager has to be used in the quiz.
 // - First checks quiz type
@@ -30,9 +24,7 @@ public class QuestionAnswerManagerFactory {
                 return new MultipleChoiceSpecificQuestionAnswerManager(repositoryFactory);
 
             }
-
         }
-
     }
 
 }

@@ -16,18 +16,13 @@ import com.janbe.quiz.logic.quiz.result.Result;
 
 import java.util.ArrayList;
 
-/**
- * Created by janbe on 07-Mar-18.
- */
 
 public class LongListQuizActivity extends AppCompatActivity {
 
     // Quiz manager
     Quiz quiz;
 
-    private ListView answerListView;
     private AnswerAdapter answerAdapter;
-    private ArrayList<Answer> answers;
 
     private TextView questionText;
     private TextView scoreText;
@@ -42,14 +37,14 @@ public class LongListQuizActivity extends AppCompatActivity {
         Intent intent = getIntent();
         quiz = (Quiz) intent.getSerializableExtra("QUIZ");
 
-        questionText = (TextView) findViewById(R.id.llQuestionText);
-        scoreText = (TextView) findViewById(R.id.llScoreText);
+        questionText = findViewById(R.id.llQuestionText);
+        scoreText = findViewById(R.id.llScoreText);
 
-        answers = new ArrayList<>();
+        ArrayList<Answer> answers = new ArrayList<>();
 
         answerAdapter = new AnswerAdapter(this, 0, answers);
 
-        answerListView = (ListView) findViewById(R.id.llAnswersListView);
+        ListView answerListView = findViewById(R.id.llAnswersListView);
         answerListView.setAdapter(answerAdapter);
 
         answerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

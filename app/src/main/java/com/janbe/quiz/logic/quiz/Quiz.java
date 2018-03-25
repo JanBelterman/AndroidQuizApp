@@ -8,10 +8,6 @@ import com.janbe.quiz.logic.quiz.score.Score;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * Created by janbe on 06-Mar-18.
- */
-
 public interface Quiz extends Serializable {
 
     // QUIZ START //

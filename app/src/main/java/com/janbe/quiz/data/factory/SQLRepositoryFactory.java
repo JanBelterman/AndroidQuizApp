@@ -5,10 +5,6 @@ import com.janbe.quiz.data.answer.SQLAnswerRepository;
 import com.janbe.quiz.data.question.QuestionRepository;
 import com.janbe.quiz.data.question.SQLQuestionRepository;
 
-/**
- * Created by janbe on 15-Mar-18.
- */
-
 public class SQLRepositoryFactory implements RepositoryFactory {
 
     @Override

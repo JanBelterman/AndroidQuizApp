@@ -13,10 +13,6 @@ import com.janbe.quiz.logic.quiz.score.Score;
 
 import java.io.Serializable;
 
-/**
- * Created by janbe on 08-Mar-18.
- */
-
 public class ResultActivity extends AppCompatActivity implements Serializable {
 
     @Override
@@ -32,16 +28,16 @@ public class ResultActivity extends AppCompatActivity implements Serializable {
 
         Score score = result.getScore();
 
-        TextView scoreText = (TextView) findViewById(R.id.rScoreText);
+        TextView scoreText = findViewById(R.id.rScoreText);
         scoreText.setText(score.getScore());
 
-        TextView totalQuestions = (TextView) findViewById(R.id.rTotalQuestionsText);
-        totalQuestions.setText(score.getTotalAnswers() + "");
+        TextView totalQuestions = findViewById(R.id.rTotalQuestionsText);
+        totalQuestions.setText(String.valueOf(score.getTotalAnswers()));
 
-        TextView answeredCorrectly = (TextView) findViewById(R.id.rAnsweredCorrectlyText);
-        answeredCorrectly.setText(score.getGoodAnswers() + "");
+        TextView answeredCorrectly = findViewById(R.id.rAnsweredCorrectlyText);
+        answeredCorrectly.setText(String.valueOf(score.getGoodAnswers()));
 
-        Button okButton = (Button) findViewById(R.id.rOkButton);
+        Button okButton = findViewById(R.id.rOkButton);
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

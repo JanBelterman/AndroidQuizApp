@@ -2,10 +2,6 @@ package com.janbe.quiz.logic.settings;
 
 import com.janbe.quiz.R;
 
-/**
- * Created by janbe on 19-Mar-18.
- */
-
 public enum QuizSetting {
 
     SETTING_QUIZ_MULTIPLE_CHOICE(R.string.multipleChoice),

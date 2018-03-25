@@ -5,12 +5,7 @@ import com.janbe.quiz.domain.explanation.Explanation;
 
 import java.util.ArrayList;
 
-/**
- * Created by janbe on 10-Mar-18.
- */
-
 public class GeneralAnsweredQuestion implements Question {
-    private static final QuestionType questionType = QuestionType.GENERAL_ANSWERED_QUESTION;
 
     private String question;
     private Answer rightAnswer;
@@ -23,12 +18,6 @@ public class GeneralAnsweredQuestion implements Question {
         this.question = question;
         this.rightAnswer = rightAnswer;
         this.explanation = explanation;
-
-    }
-
-    @Override
-    public QuestionType getQuestionType() {
-        return questionType;
 
     }
 

@@ -9,10 +9,6 @@ import com.janbe.quiz.domain.question.Question;
 import java.util.ArrayList;
 import java.util.Collections;
 
-/**
- * Created by janbe on 24-Mar-18.
- */
-
 public class MultipleChoiceSpecificQuestionAnswerManager implements QuestionAnswerManager {
 
     // Data source
@@ -23,7 +19,7 @@ public class MultipleChoiceSpecificQuestionAnswerManager implements QuestionAnsw
     // SET-UP
     //////////////////////////////////////////////////////////////////////////////////////////
 
-    public MultipleChoiceSpecificQuestionAnswerManager(RepositoryFactory repositoryFactory) {
+    MultipleChoiceSpecificQuestionAnswerManager(RepositoryFactory repositoryFactory) {
         this.repositoryFactory = repositoryFactory;
 
     }

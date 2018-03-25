@@ -11,10 +11,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-/**
- * Created by janbe on 24-Mar-18.
- */
-
 public class MultipleChoiceGeneralQuestionAnswerManager implements QuestionAnswerManager {
 
     // Data source
@@ -26,7 +22,7 @@ public class MultipleChoiceGeneralQuestionAnswerManager implements QuestionAnswe
     // SET-UP
     //////////////////////////////////////////////////////////////////////////////////////////
 
-    public MultipleChoiceGeneralQuestionAnswerManager(RepositoryFactory repositoryFactory) {
+    MultipleChoiceGeneralQuestionAnswerManager(RepositoryFactory repositoryFactory) {
         this.repositoryFactory = repositoryFactory;
 
     }

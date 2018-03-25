@@ -9,10 +9,6 @@ import com.janbe.quiz.domain.question.SpecificAnsweredQuestion;
 
 import java.util.ArrayList;
 
-/**
- * Created by janbe on 15-Mar-18.
- */
-
 public class HardCodeQuestionRepository implements QuestionRepository {
 
     @Override

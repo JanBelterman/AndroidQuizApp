@@ -5,18 +5,11 @@ import com.janbe.quiz.data.factory.RepositoryFactory;
 import com.janbe.quiz.data.question.QuestionRepository;
 import com.janbe.quiz.domain.Subject;
 import com.janbe.quiz.domain.answer.Answer;
-import com.janbe.quiz.domain.question.GeneralAnsweredQuestion;
 import com.janbe.quiz.domain.question.Question;
-import com.janbe.quiz.domain.question.QuestionType;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Random;
-
-/**
- * Created by janbe on 21-Mar-18.
- */
 
 public class LongListQuestionAnswerManager implements QuestionAnswerManager {
 
@@ -29,7 +22,7 @@ public class LongListQuestionAnswerManager implements QuestionAnswerManager {
     // SET-UP
     //////////////////////////////////////////////////////////////////////////////////////////
 
-    public LongListQuestionAnswerManager(RepositoryFactory repositoryFactory) {
+    LongListQuestionAnswerManager(RepositoryFactory repositoryFactory) {
         this.repositoryFactory = repositoryFactory;
 
     }

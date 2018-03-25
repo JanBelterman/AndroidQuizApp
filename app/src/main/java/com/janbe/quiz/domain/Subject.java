@@ -2,10 +2,6 @@ package com.janbe.quiz.domain;
 
 import com.janbe.quiz.R;
 
-/**
- * Created by janbe on 15-Mar-18.
- */
-
 // Enumeration for the available quiz subjects
 public enum Subject {
 

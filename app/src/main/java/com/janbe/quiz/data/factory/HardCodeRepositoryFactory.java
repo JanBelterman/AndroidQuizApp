@@ -5,10 +5,6 @@ import com.janbe.quiz.data.answer.HardCodeAnswerRepository;
 import com.janbe.quiz.data.question.HardCodeQuestionRepository;
 import com.janbe.quiz.data.question.QuestionRepository;
 
-/**
- * Created by janbe on 15-Mar-18.
- */
-
 public class HardCodeRepositoryFactory implements RepositoryFactory {
 
     @Override

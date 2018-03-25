@@ -1,6 +1,7 @@
 package com.janbe.quiz.userInterface.quiz.longListQuiz;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,18 +13,18 @@ import com.janbe.quiz.domain.answer.Answer;
 
 import java.util.List;
 
-/**
- * Created by janbe on 22-Mar-18.
- */
-
 public class AnswerAdapter extends ArrayAdapter<Answer> {
 
-    public AnswerAdapter(Context context, int resource, List<Answer> answers) {
+    // Constructor is package private (no identifier)
+    AnswerAdapter(Context context, int resource, List<Answer> answers) {
         super(context, resource, answers);
+
     }
 
+    // Returns a ListView item
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    @NonNull
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
 
         View view = convertView;
 
@@ -39,8 +40,12 @@ public class AnswerAdapter extends ArrayAdapter<Answer> {
 
         Answer answer = getItem(position);
 
-        TextView answerText = (TextView) view.findViewById(R.id.rowAnswerText);
-        answerText.setText(answer.getAnswer());
+        if (answer != null) {
+
+            TextView answerText = view.findViewById(R.id.rowAnswerText);
+            answerText.setText(answer.getAnswer());
+
+        }
 
         return view;
     }

@@ -15,10 +15,6 @@ import com.janbe.quiz.userInterface.quiz.QuizScreen;
 
 import java.util.ArrayList;
 
-/**
- * Created by janbe on 07-Mar-18.
- */
-
 public class MultipleChoiceQuizActivity extends AppCompatActivity implements QuizScreen {
 
     // Quiz manager
@@ -42,12 +38,12 @@ public class MultipleChoiceQuizActivity extends AppCompatActivity implements Qui
         quiz = (Quiz) intent.getSerializableExtra("QUIZ");
 
         // Getting text views
-        questionText = (TextView) findViewById(R.id.mcQuestionText);
-        answer1Text = (TextView) findViewById(R.id.mcAnswer1Text);
-        answer2Text = (TextView) findViewById(R.id.mcAnswer2Text);
-        answer3Text = (TextView) findViewById(R.id.mcAnswer3Text);
-        answer4Text = (TextView) findViewById(R.id.mcAnswer4Text);
-        scoreText = (TextView) findViewById(R.id.mcScoreText);
+        questionText = findViewById(R.id.mcQuestionText);
+        answer1Text = findViewById(R.id.mcAnswer1Text);
+        answer2Text = findViewById(R.id.mcAnswer2Text);
+        answer3Text = findViewById(R.id.mcAnswer3Text);
+        answer4Text = findViewById(R.id.mcAnswer4Text);
+        scoreText = findViewById(R.id.mcScoreText);
 
         // Launching quiz
         quiz.start();

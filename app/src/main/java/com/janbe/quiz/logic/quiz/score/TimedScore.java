@@ -1,9 +1,5 @@
 package com.janbe.quiz.logic.quiz.score;
 
-/**
- * Created by janbe on 06-Mar-18.
- */
-
 public class TimedScore implements Score {
 
     private long score;

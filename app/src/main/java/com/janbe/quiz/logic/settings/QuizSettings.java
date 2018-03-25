@@ -15,10 +15,6 @@ import com.janbe.quiz.logic.quiz.score.TimedScore;
 
 import java.io.Serializable;
 
-/**
- * Created by janbe on 06-Mar-18.
- */
-
 // QuizSettings stores user inputted options, to eventually create a quiz specific for user
 // - Talking to class with QuizSetting enum
 public class QuizSettings implements Serializable {
@@ -53,16 +49,13 @@ public class QuizSettings implements Serializable {
 
         }
 
-        // Create quiz
-        Quiz quiz = new NormalQuiz(
+        // Create and return quiz
+        return new NormalQuiz(
                 questionAnswerManager,
                 subject,
                 amountOfQuestions,
                 score,
                 new NormalResult());
-
-        // Return quiz
-        return quiz;
 
     }
 

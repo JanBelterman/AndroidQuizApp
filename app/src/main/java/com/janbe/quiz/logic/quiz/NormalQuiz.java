@@ -1,6 +1,5 @@
 package com.janbe.quiz.logic.quiz;
 
-import com.janbe.quiz.data.factory.RepositoryFactory;
 import com.janbe.quiz.domain.Subject;
 import com.janbe.quiz.domain.answer.Answer;
 import com.janbe.quiz.domain.question.Question;
@@ -9,10 +8,6 @@ import com.janbe.quiz.logic.quiz.questionAnswerManager.QuestionAnswerManager;
 import com.janbe.quiz.logic.quiz.score.Score;
 
 import java.util.ArrayList;
-
-/**
- * Created by janbe on 06-Mar-18.
- */
 
 public class NormalQuiz implements Quiz {
 
@@ -23,8 +18,6 @@ public class NormalQuiz implements Quiz {
     // Score and result
     private Score score;
     private Result result;
-    // Data source
-    private RepositoryFactory repositoryFactory;
 
     // Current question index and current question
     private int currentQuestionIndex;
@@ -92,13 +85,8 @@ public class NormalQuiz implements Quiz {
 
         }
 
-        // Check if quiz ended, if currentQuestion is null quiz ended
-        if (currentQuestion == null) {
-            return false;
-
-        }
-
-        return true;
+        // Return true if currentQuestions = null
+        return currentQuestion == null;
 
     }
 

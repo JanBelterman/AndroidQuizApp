@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 10,
                 QuizSetting.SETTING_SCORE_RATIO_SCORE);
 
-        Button customizeButton = (Button) findViewById(R.id.maSettingsButton);
+        Button customizeButton = findViewById(R.id.maSettingsButton);
         customizeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button startButton = (Button) findViewById(R.id.maStartButton);
+        Button startButton = findViewById(R.id.maStartButton);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,7 +75,10 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 1) {
 
             if (data != null) { // With back button user can parse null
-                quizSettings = (QuizSettings) data.getExtras().getSerializable("QUIZ_SETTINGS");
+                if (data.getExtras() != null) {
+                    quizSettings = (QuizSettings) data.getExtras().getSerializable("QUIZ_SETTINGS");
+
+                }
 
             }
 
@@ -87,10 +90,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateDisplayedSettings() {
 
-        TextView quizTypeText = (TextView) findViewById(R.id.maTypeText);
-        TextView subjectText = (TextView) findViewById(R.id.maSubjectText);
-        TextView amountOfQuestionsText = (TextView) findViewById(R.id.maAmountText);
-        TextView scoreTypeText = (TextView) findViewById(R.id.maScoreTypeText);
+        TextView quizTypeText = findViewById(R.id.maTypeText);
+        TextView subjectText = findViewById(R.id.maSubjectText);
+        TextView amountOfQuestionsText = findViewById(R.id.maAmountText);
+        TextView scoreTypeText = findViewById(R.id.maScoreTypeText);
 
         quizTypeText.setText(quizSettings.getQuizType().getDescription());
         subjectText.setText(quizSettings.getSubject().getDescription());

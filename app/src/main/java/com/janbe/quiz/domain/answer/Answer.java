@@ -2,10 +2,6 @@ package com.janbe.quiz.domain.answer;
 
 import java.io.Serializable;
 
-/**
- * Created by janbe on 06-Mar-18.
- */
-
 public class Answer implements Serializable {
     private String answer;
 
@@ -34,12 +30,7 @@ public class Answer implements Serializable {
 
         Answer answer = (Answer) toCompare;
 
-        if (this.answer.equals((answer.getAnswer()))) {
-            return true;
-
-        }
-
-        return false;
+        return this.answer.equals((answer.getAnswer()));
 
     }
 
