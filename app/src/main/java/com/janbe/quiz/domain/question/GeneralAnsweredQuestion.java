@@ -28,11 +28,11 @@ public class GeneralAnsweredQuestion implements Question {
     @Override
     public String getQuestion() {
 
-        if (Locale.getDefault().getDisplayLanguage().contentEquals("en")) {
-            return questionEn;
+        if (Locale.getDefault().getDisplayLanguage().contentEquals("Nederlands")) {
+            return questionNl;
 
         } else {
-            return questionNl;
+            return questionEn;
 
         }
 

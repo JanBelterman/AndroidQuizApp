@@ -21,11 +21,11 @@ public class Answer implements Serializable {
 
     public String getAnswer() {
 
-        if (Locale.getDefault().getDisplayLanguage().contentEquals("en")) {
-            return answerEn;
+        if (Locale.getDefault().getDisplayLanguage().contentEquals("Nederlands")) {
+            return answerNl;
 
         } else {
-            return answerNl;
+            return answerEn;
 
         }
 

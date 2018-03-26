@@ -219,7 +219,32 @@ public class HardCodeQuestionRepository implements QuestionRepository {
 
         ArrayList<Question> questions = new ArrayList<>();
 
+            questions.add(new SpecificAnsweredQuestion("The brain of any computer system is:",
+                    "Het brein van een computer systeem is:",
+                    new Answer("CPU", "Processor"),
+                    new Answer("HDD", "Harde schijf"),
+                    new Answer("Memory", "Geheugen"),
+                    new Answer("Power supply", "Voeding"),
+                    new Explanation("The brain of any computer system is the CPU (central processing unit)",
+                            "Het brein van een computer systeem is de processor")));
 
+        questions.add(new SpecificAnsweredQuestion("The binary system uses powers of:",
+                "Het binaire systeem gebruikt machten van:",
+                new Answer("2"),
+                new Answer("4"),
+                new Answer("1"),
+                new Answer("16"),
+                new Explanation("The binary system uses powers of 2, it consists of 0's and 1's",
+                        "Het binaire systeem gebruikt machten van 2, het bestaat uit 0en en 1en")));
+
+        questions.add(new SpecificAnsweredQuestion("A common boundary between two systems is called:",
+                "Een veelvoorkomende grens tussen twee systemen is heet:",
+                new Answer("Interface"),
+                new Answer("Surface"),
+                new Answer("Control structure"),
+                new Answer("Interdiction"),
+                new Explanation("A common boundrary between two systems is called an interface",
+                        "Een veelvoorkomende grens tussen twee systemen heet een interface")));
 
         return questions;
 
@@ -229,7 +254,14 @@ public class HardCodeQuestionRepository implements QuestionRepository {
 
         ArrayList<Question> questions = new ArrayList<>();
 
-
+            questions.add(new SpecificAnsweredQuestion("Which number does not belong in the list?\n3, 7, 15, 17, 22, 27, 29",
+                    "Welke nummer hoort niet in het rijtje thuis?\n3, 7, 15, 17, 22, 27, 29",
+                    new Answer("22"),
+                    new Answer("15"),
+                    new Answer("27"),
+                    new Answer("15"),
+                    new Explanation("22 does not belong in the list, because it is the only even number, the rest are odd numbers",
+                            "22 hoort niet in het rijtje thuis, omdat 22 even is en alle andere nummers oneven zijn")));
 
         return questions;
 

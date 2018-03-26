@@ -1,9 +1,13 @@
 package com.janbe.quiz.userInterface.quiz.multipleChoiceQuiz;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -61,15 +65,19 @@ public class MultipleChoiceQuizActivity extends AppCompatActivity implements Qui
     // - init new question with helper method
     public void answer1Clicked(View view) {
         answerClicked(1);
+
     }
     public void answer2Clicked(View view) {
         answerClicked(2);
+
     }
     public void answer3Clicked(View view) {
         answerClicked(3);
+
     }
     public void answer4Clicked(View view) {
         answerClicked(4);
+
     }
     public void answerClicked(int answer) {
 

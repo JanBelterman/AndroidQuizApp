@@ -14,11 +14,11 @@ public class Explanation {
 
     public String getExplanation() {
 
-        if (Locale.getDefault().getDisplayLanguage().contentEquals("en")) {
-            return explanationEn;
+        if (Locale.getDefault().getDisplayLanguage().contentEquals("Nederlands")) {
+            return explanationNl;
 
         } else {
-            return explanationNl;
+            return explanationEn;
 
         }
 
