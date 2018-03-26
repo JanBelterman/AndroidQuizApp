@@ -3,6 +3,9 @@ package com.janbe.quiz;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,6 +21,31 @@ public class MainActivity extends AppCompatActivity {
 
     private QuizSettings quizSettings;
 
+    // Menu stuff (settings)
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.main_activity_bar, menu);
+
+        return true;
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId() == R.id.menuSettings) {
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            intent.putExtra("SETTINGS", quizSettings);
+            startActivityForResult(intent, 1);
+
+        }
+
+        return super.onOptionsItemSelected(item);
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -30,18 +58,6 @@ public class MainActivity extends AppCompatActivity {
                 Subject.CAPITAL_CITIES,
                 10,
                 QuizSetting.SETTING_SCORE_RATIO_SCORE);
-
-        Button customizeButton = findViewById(R.id.maSettingsButton);
-        customizeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                intent.putExtra("SETTINGS", quizSettings);
-                startActivityForResult(intent, 1);
-
-            }
-        });
 
         Button startButton = findViewById(R.id.maStartButton);
         startButton.setOnClickListener(new View.OnClickListener() {
