@@ -41,7 +41,7 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         // quizSettings creates type of quiz according to user input
-        quizSettings = (QuizSettings) getIntent().getSerializableExtra("QUIZ_SETTINGS");
+        quizSettings = (QuizSettings) getIntent().getSerializableExtra("SETTINGS");
 
         // Create check boxes, control the quiz type, score type and feedback type
         createCheckBoxes();
@@ -204,7 +204,7 @@ public class SettingsActivity extends AppCompatActivity {
                     quizSettings.setSubject(Subject.COMPUTER_SCIENCE);
                     if (longListBox.isChecked()) {
                         multipleChoiceBox.toggle();
-                        showError("Long list quiz not available for " + subject);
+                        showError(R.string.long_list_quiz_not_available + " " + subject);
                     }
                     longListBox.setEnabled(Subject.COMPUTER_SCIENCE.isGeneralQuestion());
 
@@ -212,7 +212,7 @@ public class SettingsActivity extends AppCompatActivity {
                     quizSettings.setSubject(Subject.MATHS);
                     if (longListBox.isChecked()) {
                         multipleChoiceBox.toggle();
-                        showError("Long list quiz not available for " + subject);
+                        showError(R.string.long_list_quiz_not_available + " " + subject);
                     }
                     longListBox.setEnabled(Subject.MATHS.isGeneralQuestion());
 
@@ -245,7 +245,7 @@ public class SettingsActivity extends AppCompatActivity {
                 }
 
                 Intent intent = new Intent();
-                intent.putExtra("QUIZ_SETTINGS", quizSettings);
+                intent.putExtra("SETTINGS", quizSettings);
                 setResult(1, intent);
                 finish();
 
@@ -258,11 +258,11 @@ public class SettingsActivity extends AppCompatActivity {
     private boolean allOptionsChecked() {
 
         if (!quizSelected()) {
-            showError("Select a quiz type");
+            showError(getString(R.string.selectAQuizType));
             return false;
 
         } else if (!scoreSelected()) {
-            showError("Select a score type");
+            showError(getString(R.string.selectAScoreType));
             return false;
 
         }

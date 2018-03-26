@@ -24,7 +24,7 @@ public class ResultActivity extends AppCompatActivity implements Serializable {
 
         // Get result information from intent
         Intent intent = getIntent();
-        Result result = (Result) intent.getSerializableExtra("FEEDBACK");
+        Result result = (Result) intent.getSerializableExtra("RESULT");
 
         Score score = result.getScore();
 

@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-                intent.putExtra("QUIZ_SETTINGS", quizSettings);
+                intent.putExtra("SETTINGS", quizSettings);
                 startActivityForResult(intent, 1);
 
             }
@@ -48,16 +48,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-            if (quizSettings == null) {
-                Toast.makeText(MainActivity.this, "Customize quiz first", Toast.LENGTH_SHORT).show();
-
-            } else {
                 // Start quiz
                 Intent intent = new Intent(MainActivity.this, quizSettings.getQuizScreen());
                 intent.putExtra("QUIZ", quizSettings.createQuiz(new HardCodeRepositoryFactory()));
                 startActivity(intent);
-
-            }
 
             }
         });
@@ -76,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (data != null) { // With back button user can parse null
                 if (data.getExtras() != null) {
-                    quizSettings = (QuizSettings) data.getExtras().getSerializable("QUIZ_SETTINGS");
+                    quizSettings = (QuizSettings) data.getExtras().getSerializable("SETTINGS");
 
                 }
 

@@ -21,4 +21,9 @@
     <string name="TOTAL_QUESTIONS">TOTALE VRAGEN</string>
     <string name="ANSWERED_CORRECTLY">GOED BEANTWOORD</string>
     <string name="OK">OKE</string>
+    <string name="long_list_quiz_not_available">Lange lijst quiz niet beschikbaar voor</string>
+    <string name="selectAQuizType">Selecteer een soort quiz</string>
+    <string name="selectAScoreType">Selecteer een soort puntentelling</string>
+    <string name="falseMes">Fout!</string>
+    <string name="correctMes">Goed!</string>
 </resources>

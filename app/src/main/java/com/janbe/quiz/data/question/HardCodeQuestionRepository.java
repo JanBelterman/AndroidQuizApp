@@ -31,121 +31,185 @@ public class HardCodeQuestionRepository implements QuestionRepository {
 
         ArrayList<Question> questions = new ArrayList<>();
 
-        questions.add(new GeneralAnsweredQuestion("What is the capital city of The Netherlands",
-                new Answer("Amsterdam"),
-                new Explanation("The capital city of The Netherlands is Amsterdam")));
+        questions.add(new GeneralAnsweredQuestion("What is the capital city of The Netherlands?",
+                "Wat is de hoofdstad van Nederland?",
+                new Answer("Amsterdam", "Amsterdam"),
+                new Explanation("The capital city of The Netherlands is Amsterdam",
+                        "De hoofdstad van Nederland is Amsterdam")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of England?",
-                new Answer("London"),
-                new Explanation("The capital city of England is London")));
+                "Wat is de hoofdstad van Engeland?",
+                new Answer("London", "Londen"),
+                new Explanation("The capital city of England is London",
+                        "De hoofdstad van Engeland is Londen")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of France?",
-                new Answer("Paris"),
-                new Explanation("The capital city of France is Paris")));
+                "Wat is de hoofdstad van Frankrijk?",
+                new Answer("Paris", "Parijs"),
+                new Explanation("The capital city of France is Paris",
+                        "De hoofdstad van Frankrijk is Parijs")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Germany?",
-                new Answer("Berlin"),
-                new Explanation("The capital city of Germany is Berlin")));
+                "Wat is de hoofdstad van Duitsland?",
+                new Answer("Berlin", "Berlijn"),
+                new Explanation("The capital city of Germany is Berlin",
+                        "De hoofdstad van Duitsland is Berlijn")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Belgium?",
-                new Answer("Brussels"),
-                new Explanation("The capital city of Belgium is Brussels")));
+                "Wat is de hoofdstad van België?",
+                new Answer("Brussels", "Brussel"),
+                new Explanation("The capital city of Belgium is Brussels",
+                        "De hoofdstad van België is Brussel")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Spain?",
-                new Answer("Madrid"),
-                new Explanation("The capital city of Spain is Madrid")));
+                "Wat is de hoofdstad van Spanje?",
+                new Answer("Madrid", "Madrid"),
+                new Explanation("The capital city of Spain is Madrid",
+                        "De hoofdstad van Spanje is Madrid")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Portugal?",
-                new Answer("Lisbon"),
-                new Explanation("The capital city of Portugal is Lisbon")));
+                "Wat is de hoofdstad van Portugal?",
+                new Answer("Lisbon", "Lissabon"),
+                new Explanation("The capital city of Portugal is Lisbon",
+                        "De hoofdstad van Portugal is Lissabon")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Italy?",
-                new Answer("Rome"),
-                new Explanation("The capital city of Italy is Rome")));
+                "Wat is de hoofdstad van Italië?",
+                new Answer("Rome", "Rome"),
+                new Explanation("The capital city of Italy is Rome",
+                        "De hoofdstad van Italië is Rome")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Austria?",
-                new Answer("Vienna"),
-                new Explanation("The capital city of Austria is Vienna")));
+                "Wat is de hoofdstad van Oostenrijk?",
+                new Answer("Vienna", "Wenen"),
+                new Explanation("The capital city of Austria is Vienna",
+                        "De hoofdstad van Oostenrijk is Wenen")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Bulgaria?",
-                new Answer("Sofia"),
-                new Explanation("The capital city of Bulgaria is Sofia")));
+                "Wat is de hoofdstad van Bulgarije?",
+                new Answer("Sofia", "Sofia"),
+                new Explanation("The capital city of Bulgaria is Sofia",
+                        "De hoofdstad van Bulgarije is Sofia")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Croatia?",
-                new Answer("Zagreb"),
-                new Explanation("The capital city of Croatia is Zagreb")));
+                "Wat is de hoofdstad van Kroatië?",
+                new Answer("Zagreb", "Zagreb"),
+                new Explanation("The capital city of Croatia is Zagreb",
+                        "De hoofdstad van Kroatië is Zagreb")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of The Czech Republic?",
-                new Answer("Prague"),
-                new Explanation("The capital city of The Czech Republic is Prague")));
+                "Wat is de hoofdstad van Tsjechië?",
+                new Answer("Prague", "Praag"),
+                new Explanation("The capital city of The Czech Republic is Prague",
+                        "De hoofdstad van Tsjechië is Praag")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Denmark?",
-                new Answer("Copenhagen"),
-                new Explanation("The capital city of Denmark is Copenhagen")));
+                "Wat is de hoofdstad van Denemarken?",
+                new Answer("Copenhagen", "Kopenhagen"),
+                new Explanation("The capital city of Denmark is Copenhagen",
+                        "De hoofdstad van Denemarken is Kopenhagen")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Finland?",
-                new Answer("Helsinki"),
-                new Explanation("The capital city of Finland is Helsinki")));
+                "Wat is de hoofdstad van Finland?",
+                new Answer("Helsinki", "Helsinki"),
+                new Explanation("The capital city of Finland is Helsinki",
+                        "De hoofdstad van Finland is Helsinki")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Greece?",
-                new Answer("Athens"),
-                new Explanation("The capital city of Greece is Athens")));
+                "Wat is de hoofdstad van Griekenland?",
+                new Answer("Athens", "Athene"),
+                new Explanation("The capital city of Greece is Athens",
+                        "De hoofdstad van Griekenland is Athene")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Hungary?",
-                new Answer("Budapest"),
-                new Explanation("The capital city of Hungary is Budapest")));
+                "Wat is de hoofdstad van Hongarije?",
+                new Answer("Budapest", "Boedapest"),
+                new Explanation("The capital city of Hungary is Budapest",
+                        "De hoofdstad van Hongarije is Boedapest")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Iceland?",
-                new Answer("Reykjavik"),
-                new Explanation("The capital city of Iceland is Reykjavik")));
+                "Wat is de hoofdstad van IJsland?",
+                new Answer("Reykjavik", "Reykjavik"),
+                new Explanation("The capital city of Iceland is Reykjavik",
+                        "De hoofdstad van IJsland is Reykjavik")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Ireland?",
-                new Answer("Dublin"),
-                new Explanation("The capital city of Ireland is Dublin")));
+                "Wat is de hoofdstad van Ierland?",
+                new Answer("Dublin", "Dublin"),
+                new Explanation("The capital city of Ireland is Dublin",
+                        "De hoofdstad van Ierland is Dublin")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Luxembourg?",
-                new Answer("Luxembourg"),
-                new Explanation("The capital city of Luxembourg is Luxembourg")));
+                "Wat is de hoofdstad van Luxemburg?",
+                new Answer("Luxembourg", "Luxemburg"),
+                new Explanation("The capital city of Luxembourg is Luxembourg",
+                        "De hoofdstad van Luxemburg is Luxemburg")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Macedonia?",
-                new Answer("Skopje"),
-                new Explanation("The capital city of Macedonia is Skopje")));
+                "Wat is de hoofdstad van Macedonië?",
+                new Answer("Skopje", "Skopje"),
+                new Explanation("The capital city of Macedonia is Skopje",
+                        "De hoofdstad van Macedonië is Skopje")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Montenegro?",
-                new Answer("Podgorica"),
-                new Explanation("The capital city of Montenegro is Podgorica")));
+                "Wat is de hoofdstad van Montenegro?",
+                new Answer("Podgorica", "Podgorica"),
+                new Explanation("The capital city of Montenegro is Podgorica",
+                        "De hoofdstad van Montenegro is Podgorica")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Norway?",
-                new Answer("Oslo"),
-                new Explanation("The capital city of Norway is Oslo")));
+                "Wat is de hoofdstad van Noorwegen?",
+                new Answer("Oslo", "Oslo"),
+                new Explanation("The capital city of Norway is Oslo",
+                        "De hoofdstad van Noorwegen is Oslo")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Poland?",
-                new Answer("Warsaw"),
-                new Explanation("The capital city of Poland is Warsaw")));
+                "Wat is de hoofdstad van Polen?",
+                new Answer("Warsaw", "Warschau"),
+                new Explanation("The capital city of Poland is Warsaw",
+                        "De hoofdstad van Polen is Warschau")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Romania?",
-                new Answer("Bucharest"),
-                new Explanation("The capital city of Romania is Bucharest")));
+                "Wat is de hoofdstad van Roemenië?",
+                new Answer("Bucharest", "Boekarest"),
+                new Explanation("The capital city of Romania is Bucharest",
+                        "De hoofdstad van Roemenië is Boekarest")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Russia?",
-                new Answer("Moscow"),
-                new Explanation("The capital city of Russia is Moscow")));
+                "Wat is de hoofdstad van Rusland?",
+                new Answer("Moscow", "Moskou"),
+                new Explanation("The capital city of Russia is Moscow",
+                        "De hoofdstad van Rusland is Moskou")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Slovakia?",
-                new Answer("Bratislava"),
-                new Explanation("The capital city of Slovakia is Bratislava")));
+                "Wat is de hoofdstad van Slowakije?",
+                new Answer("Bratislava", "Bratislava"),
+                new Explanation("The capital city of Slovakia is Bratislava",
+                        "De hoofdstad van Slowakije is Bratislava")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Sweden?",
-                new Answer("Stockholm"),
-                new Explanation("The capital city of Sweden is Stockholm")));
+                "Wat is de hoofdstad van Zweden?",
+                new Answer("Stockholm", "Stockholm"),
+                new Explanation("The capital city of Sweden is Stockholm",
+                        "De hoofdstad van Zweden is Stockholm")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Turkey?",
-                new Answer("Ankara"),
-                new Explanation("The capital city of Turkey is Ankara")));
+                "Wat is de hoofdstad van Turkije?",
+                new Answer("Ankara", "Ankara"),
+                new Explanation("The capital city of Turkey is Ankara",
+                        "De hoofdstad van Turkije is Ankara")));
 
         questions.add(new GeneralAnsweredQuestion("What is the capital city of Ukraine?",
-                new Answer("Kiev"),
-                new Explanation("The capital city of Ukraine is Kiev")));
+                "Wat is de hoofdstad van Oekraïne?",
+                new Answer("Kiev", "Kiev"),
+                new Explanation("The capital city of Ukraine is Kiev",
+                        "De hoofdstad van Oekraïne is Kiev")));
+
+        questions.add(new GeneralAnsweredQuestion("What is the capital city of Albania?",
+                "Wat is de hoofdstad van Albanië?",
+                new Answer("Tirana", "Tirana"),
+                new Explanation("The capital city of Albania is Tirana",
+                        "De hoofdstad van Albanië is Tirana")));
 
         return questions;
 
@@ -155,30 +219,7 @@ public class HardCodeQuestionRepository implements QuestionRepository {
 
         ArrayList<Question> questions = new ArrayList<>();
 
-        questions.add(new SpecificAnsweredQuestion("What was originally called the \"imitation game\" by its creator?",
-                new Answer("The Turing Test"),
-                new Answer("The Logic Theorist"),
-                new Answer("Cybernetics"),
-                new Answer("LISP"),
-                new Explanation("")));
-        questions.add(new SpecificAnsweredQuestion("There are 25 horses. What is the minimum number of races needed so you can identify the fastest 3 horses? You can race up to 5 horses at a time, but you do not have a watch.",
-                new Answer("7"),
-                new Answer("9"),
-                new Answer("6"),
-                new Answer("10"),
-                new Explanation("")));
-        questions.add(new SpecificAnsweredQuestion("In windows a folder cannot be named:",
-                new Answer("con"),
-                new Answer("del"),
-                new Answer("sys"),
-                new Answer("bin"),
-                new Explanation("")));
-        questions.add(new SpecificAnsweredQuestion("A computer program that converts assembly language to machine language is:",
-                new Answer("Assembler"),
-                new Answer("Compiler"),
-                new Answer("Interpreter"),
-                new Answer("Comparator"),
-                new Explanation("")));
+
 
         return questions;
 
@@ -188,64 +229,7 @@ public class HardCodeQuestionRepository implements QuestionRepository {
 
         ArrayList<Question> questions = new ArrayList<>();
 
-        questions.add(new SpecificAnsweredQuestion("For each triple of numbers (a, b, c) a \"next\" triple of numbers (formula: b + c, c + a, a + b) was created. This was called an \"operation\". 2004 of such operations were made starting with numbers (1, 3, 5), and resulting with numbers (x, y, z)." +
-                "\n" + "Which is the difference of x - y?",
-                new Answer("-2"),
-                new Answer("2"),
-                new Answer("2004"),
-                new Answer("4008"),
-                new Explanation("The first few triples are:\n" +
-                        "\n" +
-                        "(1, 3, 5), (8, 6, 4), (10, 12, 14), (26, 24, 22) etc\n" +
-                        "\n" +
-                        "The difference between the first number and the second number in each triple is:\n" +
-                        "\n" +
-                        "-2, 2, -2, 2, -2 etc\n" +
-                        "\n" +
-                        "That is -2 for each even time the operation is performed and 2 for each odd time the operation is performed.\n" +
-                        "\n" +
-                        "2004 is even\n" +
-                        "So, if 2004 such operations resulted with numbers (x, y, z), then x - y = -2.")));
-        questions.add(new SpecificAnsweredQuestion("2004 is divisible by 12 and the sum of its digits is equal to 6. \n" +
-                "\n" +
-                "Altogether, how many four-digit numbers have these two properties?",
-                new Answer("18"),
-                new Answer("10"),
-                new Answer("16"),
-                new Answer("19"),
-                new Explanation("It must be even to be divisible by 12\n" +
-                        "\n" +
-                        "And the digits must add to 6, and at least one must be even (to be the units digit), so the digits must be (not in any order yet):\n" +
-                        "{0,0,0,6}, {0,0,1,5}, {0,0,2,4}, {0,1,1,4}, {0,0,3,3}, {0,1,2,3}, {0,2,2,2} or {1,1,2,2}\n" +
-                        "\n" +
-                        "{0,0,0,6} makes only 6000\n" +
-                        "{0,0,1,5} makes these even numbers: 1050, 1500, 5010 and 5100\n" +
-                        "{0,0,2,4} makes these even numbers: 2004, 2040, 2400, 4002, 4020 and 4200\n" +
-                        "{0,1,1,4} makes these even numbers: 1014, 1104, 1140 and 4110\n" +
-                        "{0,0,3,3} makes these even numbers: 3300, 3030\n" +
-                        "{0,1,2,3} makes these even numbers: 1032, 1230, 1302, 1320, 3012, 3102 and 3120\n" +
-                        "{0,2,2,2} makes these even numbers: 2220, 2202 and 2022\n" +
-                        "{1,1,2,2} makes these even numbers: 1122, 1212 and 2112\n" +
-                        "\n" +
-                        "Of the numbers listed above, the following are divisible by 12:\n" +
-                        "6000, 1500, 5100, 2004, 2040, 2400, 4020, 4200, 1104, 1140, 3300, 1032, 1320, 3012, 3120, 2220, 1212 and 2112\n" +
-                        "\n" +
-                        "There are 18 of them.")));
-        questions.add(new SpecificAnsweredQuestion("How many natural numbers n have the property that the remainder of dividing 2003 by n is equal to 23?",
-                new Answer("22"),
-                new Answer("21"),
-                new Answer("35"),
-                new Answer("36"),
-                new Explanation("If 2003 is divided by n, the result would be a whole number N plus a remainder. \n" +
-                        "If the remainder is 23, then:\n" +
-                        "\\frac{2003}{n}=N+\\frac{23}{n}\\\\\\\\\\RightarrowN=\\frac{1980}{n}\\\\\\\\\\Rightarrown=\\frac{1980}{N}\n" +
-                        "\n" +
-                        "So we need to find the factors of 1980\n" +
-                        "These are: 1, 2, 3, 4, 5, 6, 9, 10, 11, 12, 15, 18, 20, 22, 30, 33, 36, 44, 45, 55, 60, 66, 90, 99, 110, 132, 165, 180, 198, 220, 330, 396, 495, 660, 990 and 1980\n" +
-                        "\n" +
-                        "However, n must be greater than 23; otherwise the remainder cannot be 23.\n" +
-                        "\n" +
-                        "So, there are 22 possible values of n: 30, 33, 36, 44, 45, 55, 60, 66, 90, 99, 110, 132, 165, 180, 198, 220, 330, 396, 495, 660, 990 and 1980")));
+
 
         return questions;
 

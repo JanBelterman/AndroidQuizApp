@@ -1,17 +1,33 @@
 package com.janbe.quiz.domain.answer;
 
 import java.io.Serializable;
+import java.util.Locale;
 
 public class Answer implements Serializable {
-    private String answer;
+    private String answerEn;
+    private String answerNl;
 
     public Answer(String answer) {
-        this.answer = answer;
+        this.answerEn = answer;
+        this.answerNl = answer;
+
+    }
+
+    public Answer(String answerEn, String answerNl) {
+        this.answerEn = answerEn;
+        this.answerNl = answerNl;
 
     }
 
     public String getAnswer() {
-        return answer;
+
+        if (Locale.getDefault().getDisplayLanguage().contentEquals("en")) {
+            return answerEn;
+
+        } else {
+            return answerNl;
+
+        }
 
     }
 
@@ -30,7 +46,7 @@ public class Answer implements Serializable {
 
         Answer answer = (Answer) toCompare;
 
-        return this.answer.equals((answer.getAnswer()));
+        return this.getAnswer().equals((answer.getAnswer()));
 
     }
 

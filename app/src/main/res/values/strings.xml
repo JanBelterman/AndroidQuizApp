@@ -21,5 +21,10 @@
     <string name="TOTAL_QUESTIONS">TOTAL QUESTIONS</string>
     <string name="ANSWERED_CORRECTLY">ANSWERED CORRECTLY</string>
     <string name="OK">OK</string>
+    <string name="long_list_quiz_not_available">Long list quiz not available for</string>
+    <string name="selectAQuizType">Select a quiz type</string>
+    <string name="selectAScoreType">Select a score type</string>
+    <string name="falseMes">False!</string>
+    <string name="correctMes">Correct!</string>
 
 </resources>

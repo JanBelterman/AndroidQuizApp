@@ -4,22 +4,26 @@ import com.janbe.quiz.domain.answer.Answer;
 import com.janbe.quiz.domain.explanation.Explanation;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class SpecificAnsweredQuestion implements Question {
 
-    private String question;
+    private String questionEn;
+    private String questionNl;
     private Answer rightAnswer;
     private ArrayList<Answer> wrongAnswers;
     private Explanation explanation;
 
-    public SpecificAnsweredQuestion(String question,
+    public SpecificAnsweredQuestion(String questionEn,
+                                    String questionNl,
                                     Answer rightAnswer,
                                     Answer wrongAnswer1,
                                     Answer wrongAnswer2,
                                     Answer wrongAnswer3,
                                     Explanation explanation) {
 
-        this.question = question;
+        this.questionEn = questionEn;
+        this.questionNl = questionNl;
         this.rightAnswer = rightAnswer;
         this.wrongAnswers = new ArrayList<>();
         this.wrongAnswers.add(wrongAnswer1);
@@ -31,7 +35,14 @@ public class SpecificAnsweredQuestion implements Question {
 
     @Override
     public String getQuestion() {
-        return question;
+
+        if (Locale.getDefault().getDisplayLanguage().contentEquals("en")) {
+            return questionEn;
+
+        } else {
+            return questionNl;
+
+        }
 
     }
 

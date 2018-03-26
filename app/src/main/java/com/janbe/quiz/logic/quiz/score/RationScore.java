@@ -1,5 +1,7 @@
 package com.janbe.quiz.logic.quiz.score;
 
+import java.text.DecimalFormat;
+
 // RatioScore is a concrete instance of Score, which calculates score bases on the percentage of correct answers
 public class RationScore implements Score {
 
@@ -43,7 +45,7 @@ public class RationScore implements Score {
         Double ratio = ((goodAnswers * 1.0) / (totalAnswers * 1.0)) * 100;
 
         // Return without decimals (70% instead of 70,6666667%)
-        return Double.toString(Math.floor(ratio));
+        return String.valueOf(new DecimalFormat("#").format(ratio)) + "%";
 
     }
 

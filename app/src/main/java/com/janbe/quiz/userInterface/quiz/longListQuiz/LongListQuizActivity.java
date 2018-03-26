@@ -108,7 +108,7 @@ public class LongListQuizActivity extends AppCompatActivity {
         // Setup intent from quiz screen to result screen
         Intent intent = new Intent(this, result.getFeedbackScreenClass());
         // Send result data to result screen
-        intent.putExtra("FEEDBACK", result);
+        intent.putExtra("RESULT", result);
         // Start result activity
         startActivity(intent);
         // Close quiz activity
@@ -123,9 +123,9 @@ public class LongListQuizActivity extends AppCompatActivity {
     private void showResult(Boolean result) {
         String message;
         if (result) {
-            message = "Correct!";
+            message = getString(R.string.correctMes);
         } else {
-            message = "False!";
+            message = getString(R.string.falseMes);
         }
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
 

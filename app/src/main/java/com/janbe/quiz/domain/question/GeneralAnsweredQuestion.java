@@ -4,18 +4,22 @@ import com.janbe.quiz.domain.answer.Answer;
 import com.janbe.quiz.domain.explanation.Explanation;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class GeneralAnsweredQuestion implements Question {
 
-    private String question;
+    private String questionEn;
+    private String questionNl;
     private Answer rightAnswer;
     private Explanation explanation;
 
-    public GeneralAnsweredQuestion(String question,
+    public GeneralAnsweredQuestion(String questionEn,
+                                   String questionNl,
                                    Answer rightAnswer,
                                    Explanation explanation) {
 
-        this.question = question;
+        this.questionEn = questionEn;
+        this.questionNl = questionNl;
         this.rightAnswer = rightAnswer;
         this.explanation = explanation;
 
@@ -23,7 +27,14 @@ public class GeneralAnsweredQuestion implements Question {
 
     @Override
     public String getQuestion() {
-        return question;
+
+        if (Locale.getDefault().getDisplayLanguage().contentEquals("en")) {
+            return questionEn;
+
+        } else {
+            return questionNl;
+
+        }
 
     }
 

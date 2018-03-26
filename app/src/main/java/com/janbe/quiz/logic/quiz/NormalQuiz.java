@@ -86,7 +86,7 @@ public class NormalQuiz implements Quiz {
         }
 
         // Return true if currentQuestions = null
-        return currentQuestion == null;
+        return currentQuestion != null;
 
     }
 
