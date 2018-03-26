@@ -26,4 +26,5 @@
     <string name="selectAScoreType">Selecteer een soort puntentelling</string>
     <string name="falseMes">Fout!</string>
     <string name="correctMes">Goed!</string>
+    <string name="failedToSaveSettings">Opslaan van instellingen mislukt</string>
 </resources>

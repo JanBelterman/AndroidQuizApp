@@ -1,6 +1,7 @@
 package com.janbe.quiz.userInterface.settings;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
 import com.janbe.quiz.R;
 import com.janbe.quiz.domain.Subject;
 import com.janbe.quiz.logic.settings.QuizSetting;
@@ -248,6 +250,14 @@ public class SettingsActivity extends AppCompatActivity {
                 intent.putExtra("SETTINGS", quizSettings);
                 setResult(1, intent);
                 finish();
+
+                // Store settings to device data
+                SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                Gson gson = new Gson();
+                String json = gson.toJson(quizSettings);
+                editor.putString("SETTINGS", json);
+                editor.apply();
 
             }
         });

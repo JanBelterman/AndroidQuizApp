@@ -1,6 +1,7 @@
-package com.janbe.quiz;
+package com.janbe.quiz.userInterface;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -9,13 +10,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.janbe.quiz.R;
 import com.janbe.quiz.userInterface.settings.SettingsActivity;
 import com.janbe.quiz.logic.settings.QuizSetting;
 import com.janbe.quiz.logic.settings.QuizSettings;
 import com.janbe.quiz.data.factory.HardCodeRepositoryFactory;
 import com.janbe.quiz.domain.Subject;
+
+import java.lang.reflect.Type;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -58,6 +63,18 @@ public class MainActivity extends AppCompatActivity {
                 Subject.CAPITAL_CITIES,
                 10,
                 QuizSetting.SETTING_SCORE_RATIO_SCORE);
+
+        //Get stored settings
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = sharedPreferences.getString("SETTINGS", null);
+        Type type = new TypeToken<QuizSettings>(){}.getType();
+        QuizSettings storedSettings = gson.fromJson(json, type);
+
+        if (storedSettings != null) {
+            quizSettings = storedSettings;
+
+        }
 
         Button startButton = findViewById(R.id.maStartButton);
         startButton.setOnClickListener(new View.OnClickListener() {
