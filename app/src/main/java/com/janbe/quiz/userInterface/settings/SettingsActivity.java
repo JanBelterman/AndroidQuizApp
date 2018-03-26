@@ -32,6 +32,7 @@ public class SettingsActivity extends AppCompatActivity {
     private CheckBox longListBox;
     private CheckBox timedScoreBox;
     private CheckBox ratioCheckBox;
+    private CheckBox streakCheckBox;
 
     private SeekBar amountOfQuestionsSeekBar;
     private Spinner subjectSpinner;
@@ -82,8 +83,11 @@ public class SettingsActivity extends AppCompatActivity {
         if (quizSettings.getScoreType() == QuizSetting.SETTING_SCORE_RATIO_SCORE) {
             ratioCheckBox.toggle();
 
-        } else {
+        } else if (quizSettings.getScoreType() == QuizSetting.SETTING_SCORE_TIMED_SCORE) {
             timedScoreBox.toggle();
+
+        } else {
+            streakCheckBox.toggle();
 
         }
 
@@ -139,6 +143,23 @@ public class SettingsActivity extends AppCompatActivity {
                     timedScoreBox.toggle();
                 }
                 quizSettings.setScore(QuizSetting.SETTING_SCORE_RATIO_SCORE);
+            }
+        });
+        streakCheckBox = findViewById(R.id.sStreakScoreBox);
+        streakCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    if (timedScoreBox.isChecked()) {
+                        timedScoreBox.toggle();
+
+                    }
+                    if (ratioCheckBox.isChecked()) {
+                        ratioCheckBox.toggle();
+
+                    }
+                }
+                quizSettings.setScore(QuizSetting.SETTING_SCORE_STREAK_SCORE);
             }
         });
 
@@ -226,6 +247,7 @@ public class SettingsActivity extends AppCompatActivity {
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
+
         });
 
     }
@@ -286,7 +308,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     }
     private boolean scoreSelected() {
-        return ratioCheckBox.isChecked() || timedScoreBox.isChecked();
+        return ratioCheckBox.isChecked() || timedScoreBox.isChecked() || streakCheckBox.isChecked();
 
     }
 

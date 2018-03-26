@@ -27,5 +27,6 @@
     <string name="falseMes">False!</string>
     <string name="correctMes">Correct!</string>
     <string name="failedToSaveSettings">Failed to save settings</string>
+    <string name="streaks">Streaks</string>
 
 </resources>

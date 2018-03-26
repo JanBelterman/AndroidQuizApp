@@ -1,6 +1,7 @@
 package com.janbe.quiz.logic.settings;
 
 import com.janbe.quiz.logic.quiz.questionAnswerManager.QuestionAnswerManagerFactory;
+import com.janbe.quiz.logic.quiz.score.StreakScore;
 import com.janbe.quiz.userInterface.quiz.longListQuiz.LongListQuizActivity;
 import com.janbe.quiz.userInterface.quiz.multipleChoiceQuiz.MultipleChoiceQuizActivity;
 import com.janbe.quiz.data.factory.RepositoryFactory;
@@ -44,8 +45,11 @@ public class QuizSettings implements Serializable {
         if (scoreType == QuizSetting.SETTING_SCORE_RATIO_SCORE) {
             score = new RationScore();
 
-        } else {
+        } else if (scoreType == QuizSetting.SETTING_SCORE_TIMED_SCORE){
             score = new TimedScore();
+
+        } else {
+            score = new StreakScore();
 
         }
 
