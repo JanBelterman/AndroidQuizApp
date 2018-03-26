@@ -129,8 +129,14 @@ public class SettingsActivity extends AppCompatActivity {
         timedScoreBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && ratioCheckBox.isChecked()) {
-                    ratioCheckBox.toggle();
+                if (b) {
+                    if (ratioCheckBox.isChecked()) {
+                        ratioCheckBox.toggle();
+
+                    } if (streakCheckBox.isChecked()) {
+                        streakCheckBox.toggle();
+
+                    }
                 }
                 quizSettings.setScore(QuizSetting.SETTING_SCORE_TIMED_SCORE);
             }
@@ -139,8 +145,14 @@ public class SettingsActivity extends AppCompatActivity {
         ratioCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b && timedScoreBox.isChecked()) {
-                    timedScoreBox.toggle();
+                if (b) {
+                    if (timedScoreBox.isChecked()) {
+                        timedScoreBox.toggle();
+
+                    } if (streakCheckBox.isChecked()) {
+                        streakCheckBox.toggle();
+
+                    }
                 }
                 quizSettings.setScore(QuizSetting.SETTING_SCORE_RATIO_SCORE);
             }
@@ -153,8 +165,7 @@ public class SettingsActivity extends AppCompatActivity {
                     if (timedScoreBox.isChecked()) {
                         timedScoreBox.toggle();
 
-                    }
-                    if (ratioCheckBox.isChecked()) {
+                    } if (ratioCheckBox.isChecked()) {
                         ratioCheckBox.toggle();
 
                     }

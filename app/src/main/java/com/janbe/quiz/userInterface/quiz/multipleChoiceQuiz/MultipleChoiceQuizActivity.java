@@ -1,15 +1,12 @@
 package com.janbe.quiz.userInterface.quiz.multipleChoiceQuiz;
 
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.janbe.quiz.R;
 import com.janbe.quiz.domain.answer.Answer;
@@ -86,7 +83,7 @@ public class MultipleChoiceQuizActivity extends AppCompatActivity implements Qui
         // Aks quiz if answer is correct
         boolean result = quiz.questionAnswered(answerClicked);
         // Display result to user
-        showResult(result);
+        displayResult(result);
         // Try putting next question on screen
         tryNextQuestion();
 
@@ -164,15 +161,51 @@ public class MultipleChoiceQuizActivity extends AppCompatActivity implements Qui
 
     }
 
-    // Helper method that shows "Correct" or "False" Toast to user
-    private void showResult(Boolean result) {
-        String message;
+    // Helper method that shows thumbs up or thumbs down icon
+    // - Fades out both images (when the user gives rapid answers)
+    // - Than fade images in and out with helper method
+    private void displayResult(boolean result) {
+
+        // Get thumb images
+        ImageView thumbsUp = findViewById(R.id.mcThumbsUp);
+        ImageView thumbsDown = findViewById(R.id.mcThumbsDown);
+
+        // Fade them out
+        fadeOut(thumbsUp);
+        fadeOut(thumbsDown);
+
+        // Call fade method for correct thumb image
         if (result) {
-            message = getString(R.string.correctMes);
+            fadeInAndOut(thumbsUp);
+
         } else {
-            message = getString(R.string.falseMes);
+            fadeInAndOut(thumbsDown);
+
         }
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+
+    }
+
+    // Fades an image onto the screen, and after 1 second fades it back out (slow)
+    private void fadeInAndOut(ImageView imageView) {
+
+        final ImageView toFadeOut = imageView;
+
+        imageView.animate().alpha(1.0f).setDuration(500);
+
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                toFadeOut.animate().alpha(0.0f).setDuration(500);
+
+            }
+        }, 1000);
+
+    }
+    // Fades out an image (fast)
+    private void fadeOut(ImageView imageView) {
+        imageView.animate().alpha(0.0f).setDuration(100);
 
     }
 
