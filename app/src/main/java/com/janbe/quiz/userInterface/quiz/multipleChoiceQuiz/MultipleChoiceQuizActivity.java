@@ -190,22 +190,22 @@ public class MultipleChoiceQuizActivity extends AppCompatActivity implements Qui
 
         final ImageView toFadeOut = imageView;
 
-        imageView.animate().alpha(1.0f).setDuration(500);
+        imageView.animate().alpha(1.0f).setDuration(300);
 
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
 
-                toFadeOut.animate().alpha(0.0f).setDuration(500);
+                toFadeOut.animate().alpha(0.0f).setDuration(300);
 
             }
-        }, 1000);
+        }, 750);
 
     }
     // Fades out an image (fast)
     private void fadeOut(ImageView imageView) {
-        imageView.animate().alpha(0.0f).setDuration(100);
+        imageView.animate().alpha(0.0f).setDuration(50);
 
     }
 
