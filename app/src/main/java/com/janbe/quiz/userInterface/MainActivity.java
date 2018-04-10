@@ -17,7 +17,7 @@ import com.janbe.quiz.R;
 import com.janbe.quiz.userInterface.settings.SettingsActivity;
 import com.janbe.quiz.logic.settings.QuizSetting;
 import com.janbe.quiz.logic.settings.QuizSettings;
-import com.janbe.quiz.data.factory.HardCodeRepositoryFactory;
+import com.janbe.quiz.dataAcces.factory.HardCodeRepositoryFactory;
 import com.janbe.quiz.domain.Subject;
 
 import java.lang.reflect.Type;

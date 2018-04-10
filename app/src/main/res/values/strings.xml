@@ -28,5 +28,8 @@
     <string name="correctMes">Correct!</string>
     <string name="failedToSaveSettings">Failed to save settings</string>
     <string name="streaks">Streaks</string>
+    <string name="question">Question</string>
+    <string name="answersGiven">Answers given:</string>
+    <string name="answeredCorrect">Answered correct:</string>
 
 </resources>

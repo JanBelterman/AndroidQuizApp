@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- Standard Android colors -->
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="darkOrange">#df5620</color>
-    <color name="lightOrange">#ffff8800</color>
+    <!-- Default colors -->
+    <color name="darkOrange">#f18000</color>
+    <color name="lightOrange">#ff8c09</color>
+
+    <!-- Quiz mc Answer colors -->
+    <color name="answer1">#c92424</color>
+    <color name="answer2">#82c74c</color>
+    <color name="answer3">#3b82ab</color>
+    <color name="answer4">#7f3aa1</color>
+
 </resources>

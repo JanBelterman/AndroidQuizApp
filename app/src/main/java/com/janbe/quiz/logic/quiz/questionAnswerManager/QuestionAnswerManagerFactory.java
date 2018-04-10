@@ -1,6 +1,6 @@
 package com.janbe.quiz.logic.quiz.questionAnswerManager;
 
-import com.janbe.quiz.data.factory.RepositoryFactory;
+import com.janbe.quiz.dataAcces.factory.RepositoryFactory;
 import com.janbe.quiz.logic.settings.QuizSetting;
 
 // Simple factory to determine which QuestionAnswerManager has to be used in the quiz.

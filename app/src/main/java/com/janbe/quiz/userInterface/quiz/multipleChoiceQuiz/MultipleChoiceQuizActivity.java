@@ -1,10 +1,12 @@
 package com.janbe.quiz.userInterface.quiz.multipleChoiceQuiz;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,19 +22,40 @@ public class MultipleChoiceQuizActivity extends AppCompatActivity implements Qui
 
     // Quiz manager
     private Quiz quiz;
-    // Text views for question, answers and score
+
+    // Question and score text
     private TextView questionText;
+    private TextView questionNrText;
+    private TextView scoreText;
+    // Answer texts
     private TextView answer1Text;
     private TextView answer2Text;
     private TextView answer3Text;
     private TextView answer4Text;
-    private TextView scoreText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_multiple_choise);
+
+        // Get intent objects
+        // Create logic objects
+        // Link frequently used activity views to variables
+        setupActivity();
+
+        setupScoreListener();
+
+        // Setup answer click listeners
+        setupAnswerListeners();
+
+        // Launching quiz
+        quiz.start();
+        // Displaying quiz's first question
+        updateDisplay();
+
+    }
+
+    private void setupActivity() {
 
         // Get quiz from intent, parsed from quiz selector activity (MainActivity)
         Intent intent = getIntent();
@@ -40,16 +63,72 @@ public class MultipleChoiceQuizActivity extends AppCompatActivity implements Qui
 
         // Getting text views
         questionText = findViewById(R.id.mcQuestionText);
+        questionNrText = findViewById(R.id.mcQuestionNrText);
+        scoreText = findViewById(R.id.mcScoreText);
         answer1Text = findViewById(R.id.mcAnswer1Text);
         answer2Text = findViewById(R.id.mcAnswer2Text);
         answer3Text = findViewById(R.id.mcAnswer3Text);
         answer4Text = findViewById(R.id.mcAnswer4Text);
-        scoreText = findViewById(R.id.mcScoreText);
 
-        // Launching quiz
-        quiz.start();
-        // Displaying quiz's first question
-        updateDisplay();
+    }
+
+    private void setupScoreListener() {
+
+        scoreText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                final Dialog dialog = new Dialog(MultipleChoiceQuizActivity.this);
+                dialog.setContentView(R.layout.custom);
+                dialog.setTitle("Score");
+
+                TextView dialogAnswerCount = dialog.findViewById(R.id.scoreDialogAnswersGivenText);
+                dialogAnswerCount.setText(getString(R.string.answersGiven) + " " + (quiz.getScore().getTotalAnswers() - 1));
+
+                TextView dialogAnswerCorrectCount = dialog.findViewById(R.id.scoreDialogAnswersCorrectText);
+                dialogAnswerCorrectCount.setText(getString(R.string.answeredCorrect) + " " + quiz.getScore().getGoodAnswers());
+
+                Button dialogButton = (Button) dialog.findViewById(R.id.scoreDialogOkButton);
+                dialogButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.show();
+
+            }
+        });
+
+    }
+
+    private void setupAnswerListeners() {
+
+        answer1Text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                answer1Clicked(view);
+            }
+        });
+        answer2Text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                answer2Clicked(view);
+            }
+        });
+        answer3Text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                answer3Clicked(view);
+            }
+        });
+        answer4Text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                answer4Clicked(view);
+            }
+        });
 
     }
 
@@ -117,6 +196,7 @@ public class MultipleChoiceQuizActivity extends AppCompatActivity implements Qui
         scoreText.setText(quiz.getScore().getScore());
         // Display new question and answers
         questionText.setText(quiz.getQuestion().getQuestion()); // Asking current question
+        questionNrText.setText(getString(R.string.question) + " " + quiz.getQuestionNr());
         // Ask quiz for 4 answers, return consists of one correct answer, other 3 are random general or specific false answers
         ArrayList<Answer> answers = quiz.getAnswers();
         // Display answers

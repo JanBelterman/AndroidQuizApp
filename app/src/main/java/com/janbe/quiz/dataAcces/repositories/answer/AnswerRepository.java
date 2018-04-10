@@ -1,4 +1,4 @@
-package com.janbe.quiz.data.answer;
+package com.janbe.quiz.dataAcces.repositories.answer;
 
 import com.janbe.quiz.domain.Subject;
 import com.janbe.quiz.domain.answer.Answer;

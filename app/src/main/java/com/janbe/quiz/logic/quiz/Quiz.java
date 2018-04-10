@@ -18,6 +18,7 @@ public interface Quiz extends Serializable {
 
     // Get questions and answers
     Question getQuestion();
+    int getQuestionNr();
     ArrayList<Answer> getAnswers();
 
     // Question answered

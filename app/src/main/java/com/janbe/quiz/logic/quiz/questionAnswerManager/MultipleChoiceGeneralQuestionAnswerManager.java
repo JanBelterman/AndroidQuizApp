@@ -1,8 +1,8 @@
 package com.janbe.quiz.logic.quiz.questionAnswerManager;
 
-import com.janbe.quiz.data.answer.AnswerRepository;
-import com.janbe.quiz.data.factory.RepositoryFactory;
-import com.janbe.quiz.data.question.QuestionRepository;
+import com.janbe.quiz.dataAcces.repositories.answer.AnswerRepository;
+import com.janbe.quiz.dataAcces.factory.RepositoryFactory;
+import com.janbe.quiz.dataAcces.repositories.question.QuestionRepository;
 import com.janbe.quiz.domain.Subject;
 import com.janbe.quiz.domain.answer.Answer;
 import com.janbe.quiz.domain.question.Question;

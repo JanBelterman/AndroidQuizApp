@@ -4,7 +4,7 @@ import com.janbe.quiz.logic.quiz.questionAnswerManager.QuestionAnswerManagerFact
 import com.janbe.quiz.logic.quiz.score.StreakScore;
 import com.janbe.quiz.userInterface.quiz.longListQuiz.LongListQuizActivity;
 import com.janbe.quiz.userInterface.quiz.multipleChoiceQuiz.MultipleChoiceQuizActivity;
-import com.janbe.quiz.data.factory.RepositoryFactory;
+import com.janbe.quiz.dataAcces.factory.RepositoryFactory;
 import com.janbe.quiz.domain.Subject;
 import com.janbe.quiz.logic.quiz.NormalQuiz;
 import com.janbe.quiz.logic.quiz.Quiz;

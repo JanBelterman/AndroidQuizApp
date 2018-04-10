@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:layout_editor_absoluteY="81dp">
 
+    <!-- Guidelines -->
+
     <android.support.constraint.Guideline
         android:id="@+id/multipleChoiceQuizGuideline1"
         android:layout_width="wrap_content"
@@ -27,164 +29,137 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
 
-    <ImageView
-        android:id="@+id/mcScoreImageView"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@color/darkOrange" />
+    <!-- Score and answer texts -->
 
     <TextView
         android:id="@+id/mcScoreText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/score_bubble"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/mcScoreImageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="100%" />
 
     <TextView
         android:id="@+id/mcQuestionText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        android:text="Question"
+        android:background="@drawable/text_card_rounded"
         android:textAlignment="center"
+        android:textColor="@android:color/white"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/multipleChoiceQuizGuideline1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mcScoreText" />
+        app:layout_constraintTop_toBottomOf="@+id/mcScoreText"
+        tools:text="Question" />
 
-    <ImageView
-        android:id="@+id/mcAnswer1View"
+    <TextView
+        android:id="@+id/mcQuestionNrText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/text_question_nr_box"
+        android:text="Question 1"
+        app:layout_constraintEnd_toEndOf="@+id/mcQuestionText"
+        app:layout_constraintStart_toStartOf="@+id/mcQuestionText"
+        app:layout_constraintTop_toBottomOf="@+id/mcQuestionText"
+        tools:text="Question 1" />
+
+    <!-- Answer texts -->
+
+    <TextView
+        android:id="@+id/mcAnswer1Text"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="2dp"
-        android:layout_marginEnd="2dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:onClick="answer1Clicked"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/answer_box"
+        android:backgroundTint="@color/answer1"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/multipleChoiceQuizGuideline2"
         app:layout_constraintEnd_toStartOf="@+id/multipleChoiceQuizGuideline3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/multipleChoiceQuizGuideline1"
-        app:srcCompat="@android:color/holo_red_dark" />
-
-    <TextView
-        android:id="@+id/mcAnswer1Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Answer1"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/mcAnswer1View"
-        app:layout_constraintEnd_toEndOf="@+id/mcAnswer1View"
-        app:layout_constraintStart_toStartOf="@+id/mcAnswer1View"
-        app:layout_constraintTop_toTopOf="@+id/mcAnswer1View" />
-
-    <ImageView
-        android:id="@+id/mcAnswer2View"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="2dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="4dp"
-        android:onClick="answer2Clicked"
-        app:layout_constraintBottom_toTopOf="@+id/multipleChoiceQuizGuideline2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/multipleChoiceQuizGuideline3"
-        app:layout_constraintTop_toBottomOf="@+id/multipleChoiceQuizGuideline1"
-        app:srcCompat="@android:color/holo_purple" />
+        tools:text="Answer1" />
 
     <TextView
         android:id="@+id/mcAnswer2Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Answer2"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/mcAnswer2View"
-        app:layout_constraintEnd_toEndOf="@+id/mcAnswer2View"
-        app:layout_constraintStart_toStartOf="@+id/mcAnswer2View"
-        app:layout_constraintTop_toTopOf="@+id/mcAnswer2View" />
-
-    <ImageView
-        android:id="@+id/mcAnswer3View"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="4dp"
-        android:layout_marginEnd="2dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="2dp"
-        android:onClick="answer3Clicked"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/answer_box"
+        android:backgroundTint="@color/answer2"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/multipleChoiceQuizGuideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/multipleChoiceQuizGuideline3"
+        app:layout_constraintTop_toTopOf="@+id/multipleChoiceQuizGuideline1"
+        tools:text="Answer2" />
+
+    <TextView
+        android:id="@+id/mcAnswer3Text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/answer_box"
+        android:backgroundTint="@color/answer3"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/multipleChoiceQuizGuideline3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/multipleChoiceQuizGuideline2"
-        app:srcCompat="@android:color/holo_blue_dark" />
+        tools:text="Answer3" />
 
     <TextView
-        android:id="@+id/mcAnswer3Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Answer3"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/mcAnswer3View"
-        app:layout_constraintEnd_toEndOf="@+id/mcAnswer3View"
-        app:layout_constraintStart_toStartOf="@+id/mcAnswer3View"
-        app:layout_constraintTop_toTopOf="@+id/mcAnswer3View" />
-
-    <ImageView
-        android:id="@+id/mcAnswer4View"
+        android:id="@+id/mcAnswer4Text"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
-        android:onClick="answer4Clicked"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/answer_box"
+        android:backgroundTint="@color/answer4"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/multipleChoiceQuizGuideline3"
         app:layout_constraintTop_toTopOf="@+id/multipleChoiceQuizGuideline2"
-        app:srcCompat="@android:color/holo_green_dark" />
+        tools:text="Answer4" />
 
-    <TextView
-        android:id="@+id/mcAnswer4Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Answer4"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/mcAnswer4View"
-        app:layout_constraintStart_toStartOf="@+id/mcAnswer4View"
-        app:layout_constraintTop_toTopOf="@+id/mcAnswer4View" />
+    <!-- Thumb images -->
 
     <ImageView
         android:id="@+id/mcThumbsUp"
@@ -192,6 +167,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:alpha="0"
+        android:tint="#50a643"
         app:layout_constraintBottom_toTopOf="@+id/multipleChoiceQuizGuideline1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -204,6 +180,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:alpha="0"
+        android:tint="#b90a01"
         app:layout_constraintBottom_toTopOf="@+id/multipleChoiceQuizGuideline1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

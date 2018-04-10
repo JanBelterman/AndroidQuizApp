@@ -99,6 +99,12 @@ public class NormalQuiz implements Quiz {
     }
 
     @Override
+    public int getQuestionNr() {
+        return currentQuestionIndex + 1;
+
+    }
+
+    @Override
     public ArrayList<Answer> getAnswers() {
         return questionAnswerManager.getAnswers(currentQuestionIndex);
 
